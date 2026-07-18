@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../styles.css">
+  <title>Payment Type</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../../../index.html" class="brand"><img src="../../../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../../../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../../../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="../../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../../article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Administration</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="../article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Administration
+        </a>
+      </div>
+
+      <h1 class="detail-title">Payment Type</h1>
+      <p class="detail-subtitle">Configure payment methods and payment type settings.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      </div>
+
+      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
+        <p style="margin: 0; color: var(--gray-800);">Content for Payment Type coming soon.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Search functionality
+  const searchInput = document.getElementById('search-input');
+  let currentMatch = 0;
+  let matches = [];
+
+  function clearHighlights() {
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      while (el.firstChild) {
+        parent.insertBefore(el.firstChild, el);
+      }
+      parent.removeChild(el);
+    });
+  }
+
+  function searchContent(query) {
+    clearHighlights();
+    matches = [];
+    currentMatch = 0;
+
+    if (!query.trim()) return;
+
+    const mainContent = document.querySelector('main');
+    const walker = document.createTreeWalker(
+      mainContent,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    let node;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+    while (node = walker.nextNode()) {
+      if (regex.test(node.textContent)) {
+        const span = document.createElement('span');
+        span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight" style="background-color: #fff3cd; padding: 2px 4px; border-radius: 2px;">$1</mark>');
+        node.parentNode.replaceChild(span, node);
+
+        const highlights = span.querySelectorAll('.search-highlight');
+        highlights.forEach(h => matches.push(h));
+      }
+    }
+
+    if (matches.length > 0) {
+      matches[0].style.backgroundColor = '#ffc107';
+      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    searchContent(e.target.value);
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const query = e.target.value;
+      if (matches.length > 0) {
+        currentMatch = (currentMatch + 1) % matches.length;
+        matches[currentMatch].style.backgroundColor = '#ffc107';
+        matches.forEach((m, i) => {
+          if (i !== currentMatch) m.style.backgroundColor = '#fff3cd';
+        });
+        matches[currentMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+</script>
+</body>
+</html>

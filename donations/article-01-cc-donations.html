@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Credit Card Donations</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../index.html" class="brand"><img src="../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label"><i class="fa-solid fa-lock"></i> ADMIN</div>
+        <a href="article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns Guide</a>
+        </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Guide
+        </a>
+      </div>
+
+      <h1 class="detail-title">Managing Credit Card (CC) Donations</h1>
+      <p class="detail-subtitle">Comprehensive guide to managing credit card donations and transactions.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      </div>
+
+      <p style="margin-bottom: 25px;">The <strong>Donations</strong> module, located under the <strong>Finance</strong> tab, serves as the central hub for viewing, filtering, and tracking all financial contributions. The <strong>CC Donations</strong> section specifically displays all online credit card transactions processed through the donation platform.</p>
+
+      <h4 style="margin-bottom: 15px; color: var(--green);">Accessing the Donations Module</h4>
+      <p style="margin-bottom: 15px;">Sign in to the <strong>MACSIS Admin Panel</strong> using your Microsoft MAC email account at <a href="https://sis3admin.macnet.ca/home">https://sis3admin.macnet.ca/home</a>. Once you have successfully signed in, navigate to the <strong>Finance</strong> tab in the left-hand navigation menu (identified by the <strong>$</strong> icon) and expand it. From there, click <strong>Donations</strong> to access the available donation modules, including <strong>CC Donations</strong> and <strong>E-Transfers</strong>.</p>
+
+      <h4 style="margin-bottom: 15px; color: var(--green);">Where Do Our Donations Come From?</h4>
+      <p style="margin-bottom: 15px;">MACSIS centralizes donations received from all of MAC's supported donation platforms, allowing you to manage and report on contributions from a single location.</p>
+
+      <p style="margin-bottom: 15px;">Donations can be received through the following channels:</p>
+      <ul style="margin-bottom: 25px;">
+        <li style="margin-bottom: 10px;"><strong>Donation Portal</strong> â€“ Online donations made through the MAC Donation Portal.</li>
+        <li style="margin-bottom: 10px;"><strong>Donation Kiosks</strong> â€“ Self-service donation kiosks located at participating MAC centres.</li>
+        <li style="margin-bottom: 10px;"><strong>MAC POS (S700)</strong> â€“ In-person donations processed through the MAC S700 point-of-sale terminals.</li>
+      </ul>
+
+      <p style="margin-bottom: 25px;">Regardless of where a donation is made, all transactions are synchronized with MACSIS, providing a centralized location to view, manage, verify, and report on donations across your centre.</p>
+
+
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>Â© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Search functionality
+  const searchInput = document.getElementById('search-input');
+  let currentMatch = 0;
+  let matches = [];
+
+  function clearHighlights() {
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      while (el.firstChild) {
+        parent.insertBefore(el.firstChild, el);
+      }
+      parent.removeChild(el);
+    });
+  }
+
+  function searchContent(query) {
+    clearHighlights();
+    matches = [];
+    currentMatch = 0;
+
+    if (!query.trim()) return;
+
+    const mainContent = document.querySelector('main');
+    const walker = document.createTreeWalker(
+      mainContent,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    let node;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+    while (node = walker.nextNode()) {
+      if (regex.test(node.textContent)) {
+        const span = document.createElement('span');
+        span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight" style="background-color: #fff3cd; padding: 2px 4px; border-radius: 2px;">$1</mark>');
+        node.parentNode.replaceChild(span, node);
+
+        const highlights = span.querySelectorAll('.search-highlight');
+        highlights.forEach(h => matches.push(h));
+      }
+    }
+
+    if (matches.length > 0) {
+      matches[0].style.backgroundColor = '#ffc107';
+      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    searchContent(e.target.value);
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const query = e.target.value;
+      if (matches.length > 0) {
+        currentMatch = (currentMatch + 1) % matches.length;
+        matches[currentMatch].style.backgroundColor = '#ffc107';
+        matches.forEach((m, i) => {
+          if (i !== currentMatch) m.style.backgroundColor = '#fff3cd';
+        });
+        matches[currentMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+</script>
+</body>
+</html>
+
+
+

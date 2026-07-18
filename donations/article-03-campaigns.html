@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Managing Campaigns</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../index.html" class="brand"><img src="../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label"><i class="fa-solid fa-lock"></i> ADMIN</div>
+        <a href="article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns Guide</a>
+        </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Guide
+        </a>
+      </div>
+
+      <h1 class="detail-title">Creating & Managing Fundraising Campaigns</h1>
+      <p class="detail-subtitle">Comprehensive guide to setting up and managing fundraising campaigns.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      </div>
+
+      <p style="margin-bottom: 25px;">The Campaigns module is where you create, view, and manage our fundraising initiatives.</p>
+
+      <h4 style="margin-bottom: 15px; color: var(--green);">What Is a Campaign?</h4>
+      <p style="margin-bottom: 15px;">A campaign determines where a donation will be allocated within your project. Examples of campaigns include Zakat al-Mal, Zakat al-Fitr, Masjid Renovations, Sadaqah, and other fundraising initiatives.</p>
+
+      <p style="margin-bottom: 15px;">Once a campaign has been created and enabled, it becomes available across MAC's donation platforms, allowing donors to contribute to that specific cause through multiple channels, including:</p>
+      <ul style="margin-bottom: 25px;">
+        <li>The Donation Portal (donations.macnet.ca)</li>
+        <li>MAC Donation Kiosks</li>
+        <li>MAC POS (S700)</li>
+      </ul>
+
+      <p style="margin-bottom: 25px;">Using campaigns ensures that donations are accurately categorized, reported, and directed to the intended fundraising initiative.</p>
+
+      <h4 style="margin-bottom: 15px; color: var(--green);">Creating a New Campaign</h4>
+
+      <p style="margin-bottom: 15px;">To create a new donation campaign, navigate to <strong>Administration</strong> â†’ <strong>Campaigns</strong>.</p>
+
+      <p style="margin-bottom: 15px;">On this page, you'll see a list of all campaigns that have already been created for your centre. To create a new campaign, click the <strong>+ (Add)</strong> icon in the top-right corner.</p>
+
+      <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center;">
+        <img src="../add-campaign-form.png" alt="Add Campaign Form" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <p style="margin-top: 15px; font-size: 13px; color: var(--gray-600);">Figure: The Add Campaign form with all required fields for creating a new fundraising campaign.</p>
+      </div>
+
+      <p style="margin-bottom: 15px;">Complete the following fields:</p>
+
+      <ul style="margin-bottom: 30px;">
+        <li style="margin-bottom: 12px;"><strong>Campaign Type</strong> â€“ Select <strong>Donation</strong>.</li>
+        <li style="margin-bottom: 12px;"><strong>Campaign Name</strong> â€“ Enter the name of your campaign (e.g., <em>Zakat al-Mal</em>, <em>Masjid Renovations</em>, <em>Sadaqah</em>, etc.).</li>
+        <li style="margin-bottom: 12px;"><strong>Description</strong> â€“ Provide a brief description of the campaign. This description may be displayed to donors on supported donation platforms.</li>
+        <li style="margin-bottom: 12px;"><strong>Campaign Identifier</strong> â€“ This field links your campaign to the appropriate accounting category, ensuring donations are recorded correctly for financial reporting. If you cannot find the appropriate campaign identifier, check the <strong>"I'm unable to find my campaign"</strong> box. This will notify the Accounting team, who will create and assign the correct identifier.</li>
+        <li style="margin-bottom: 12px;"><strong>Suggested Amounts</strong> â€“ Enter preset donation amounts that will be displayed to donors, making it easier for them to choose a contribution amount.</li>
+        <li style="margin-bottom: 12px;"><strong>Recurrence Frequency</strong> â€“ Select which recurring donation options you would like to offer: One-Time, Daily, Weekly, or Monthly.</li>
+        <li style="margin-bottom: 12px;"><strong>Visible On</strong> â€“ Choose where the campaign should appear: Donation Portal, Donation Kiosks, or MAC POS (S700).</li>
+        <li style="margin-bottom: 12px;"><strong>Status</strong> â€“ Set the campaign to <strong>Active</strong> to make it available to donors or <strong>Inactive</strong> to hide it without deleting it.</li>
+        <li style="margin-bottom: 12px;"><strong>Campaign Icon</strong> â€“ Upload an icon or image to visually represent the campaign where supported.</li>
+      </ul>
+
+      <p style="margin-bottom: 15px;">Once all required fields have been completed, click <strong>Save</strong> to create the campaign. If the campaign is marked as <strong>Active</strong> and enabled for one or more platforms, it will automatically become available on the selected donation channels.</p>
+
+      <h4 style="margin-bottom: 15px; color: var(--green);">Editing Campaigns</h4>
+      <ol style="line-height: 2; margin-bottom: 30px;">
+        <li>Select the campaign from your dashboard.</li>
+        <li>Click the blue <strong>Edit</strong> button to open the settings.</li>
+        <li>Update your information and click <strong>Save</strong> to publish your changes.</li>
+      </ol>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>Â© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Search functionality
+  const searchInput = document.getElementById('search-input');
+  let currentMatch = 0;
+  let matches = [];
+
+  function clearHighlights() {
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      while (el.firstChild) {
+        parent.insertBefore(el.firstChild, el);
+      }
+      parent.removeChild(el);
+    });
+  }
+
+  function searchContent(query) {
+    clearHighlights();
+    matches = [];
+    currentMatch = 0;
+
+    if (!query.trim()) return;
+
+    const mainContent = document.querySelector('main');
+    const walker = document.createTreeWalker(
+      mainContent,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    let node;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+    while (node = walker.nextNode()) {
+      if (regex.test(node.textContent)) {
+        const span = document.createElement('span');
+        span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight" style="background-color: #fff3cd; padding: 2px 4px; border-radius: 2px;">$1</mark>');
+        node.parentNode.replaceChild(span, node);
+
+        const highlights = span.querySelectorAll('.search-highlight');
+        highlights.forEach(h => matches.push(h));
+      }
+    }
+
+    if (matches.length > 0) {
+      matches[0].style.backgroundColor = '#ffc107';
+      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    searchContent(e.target.value);
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const query = e.target.value;
+      if (matches.length > 0) {
+        currentMatch = (currentMatch + 1) % matches.length;
+        matches[currentMatch].style.backgroundColor = '#ffc107';
+        matches.forEach((m, i) => {
+          if (i !== currentMatch) m.style.backgroundColor = '#fff3cd';
+        });
+        matches[currentMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+</script>
+</body>
+</html>
+
+
+

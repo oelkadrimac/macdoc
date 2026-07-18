@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <title>E-Transfers</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../index.html" class="brand"><img src="../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label"><i class="fa-solid fa-lock"></i> ADMIN</div>
+        <a href="article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns Guide</a>
+        </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Guide
+        </a>
+      </div>
+
+      <h1 class="detail-title">E-Transfers</h1>
+      <p class="detail-subtitle">Learn how to manage and verify direct bank transfer donations.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      </div>
+
+      <p style="margin-bottom: 25px;">The e-Transfer tab helps you manage direct bank transfers. Because these are initiated through banking portals rather than an automated gateway, this section allows you to manually verify deposits against our bank records.</p>
+
+      <h4 id="automated-workflow" style="margin-bottom: 15px; color: var(--green);">Automated Workflow</h4>
+      <p style="margin-bottom: 15px;">When a donor sends an Interac e-Transfer to a MAC centre, the system automatically sends an email inviting them to create a donor profile in MACSIS.</p>
+      <p style="margin-bottom: 25px;">Once the donor creates their profile, their donation history will be linked to their account, allowing them to track their contributions and become eligible to receive tax receipts for verified donations. Any future e-Transfer donations made using the same email address will also be automatically associated with their donor profile, providing a seamless and convenient donation experience.</p>
+
+      <h4 id="view-etransfers" style="margin-bottom: 15px; color: var(--green); scroll-margin-top: 80px;">How Do I View My e-Transfers?</h4>
+      <p style="margin-bottom: 15px;">To view all e-Transfer donations, navigate to <strong>Finance</strong> â†’ <strong>Donations</strong> â†’ <strong>e-Transfers</strong>.</p>
+      <p style="margin-bottom: 15px;">The <strong>e-Transfers</strong> page displays all Interac e-Transfer donations received through MACSIS beginning in <strong>2026</strong>, when the feature was introduced. From this page, you can review and manage each donation before it is verified.</p>
+
+      <p style="margin-bottom: 15px;">For each e-Transfer, the following information is displayed:</p>
+      <ul style="margin-bottom: 25px;">
+        <li><strong>Donor Name</strong></li>
+        <li><strong>Email Address</strong></li>
+        <li><strong>Donation Amount</strong></li>
+        <li><strong>Transaction Date</strong></li>
+        <li><strong>Reference Number</strong></li>
+        <li><strong>Campaign Message</strong> (if the donor included one with their e-Transfer)</li>
+      </ul>
+      <p style="margin-bottom: 25px;">This page provides a centralized view of all incoming e-Transfer donations, making it easy to track, verify, and manage donations across your MAC centre.</p>
+
+      <h4 id="add-campaign" style="margin-bottom: 15px; color: var(--green); scroll-margin-top: 80px;">How Do I Add a Campaign to an e-Transfer Donation?</h4>
+      <p style="margin-bottom: 15px;">It is the responsibility of the centre manager or administrator to assign a campaign to each e-Transfer donation. If a donor did not specify a campaign in their e-Transfer message, you should assign the appropriate campaign before verifying the donation.</p>
+
+      <p style="margin-bottom: 15px;">To assign a campaign:</p>
+      <ol style="margin-bottom: 25px; line-height: 2;">
+        <li>Navigate to <strong>Finance</strong> â†’ <strong>Donations</strong> â†’ <strong>e-Transfers</strong>.</li>
+        <li>Select the checkbox next to the donation you wish to update. You may select multiple donations to perform a bulk update.</li>
+        <li>From the top toolbar, click the <strong>Select Campaign</strong> dropdown.</li>
+        <li>Choose the appropriate campaign from the list of available campaigns for your centre.</li>
+        <li>Click <strong>Apply</strong> to assign the selected campaign to the chosen donation(s).</li>
+      </ol>
+
+      <p style="margin-bottom: 25px;">The selected campaign will be applied to all checked donations, making it easy to update multiple e-Transfer donations at once.</p>
+
+      <div id="important-note" style="background: #FFF3E0; border: 1px solid #FFE0B2; padding: 20px; border-radius: 8px; margin-top: 30px;">
+        <h4 style="margin-top: 0; color: var(--green);">Important</h4>
+        <p style="margin-bottom: 15px;">Please ask donors to include a message with their e-Transfer indicating the campaign they wish to support (e.g., Zakat al-Mal, Zakat al-Fitr, Masjid Renovations, etc.).</p>
+        <p style="margin: 0;">If no campaign is specified in the e-Transfer message, the donation will automatically be processed as a General Donation.</p>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>Â© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Search functionality
+  const searchInput = document.getElementById('search-input');
+  let currentMatch = 0;
+  let matches = [];
+
+  function clearHighlights() {
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      while (el.firstChild) {
+        parent.insertBefore(el.firstChild, el);
+      }
+      parent.removeChild(el);
+    });
+  }
+
+  function searchContent(query) {
+    clearHighlights();
+    matches = [];
+    currentMatch = 0;
+
+    if (!query.trim()) return;
+
+    const mainContent = document.querySelector('main');
+    const walker = document.createTreeWalker(
+      mainContent,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    let node;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+    while (node = walker.nextNode()) {
+      if (regex.test(node.textContent)) {
+        const span = document.createElement('span');
+        span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight" style="background-color: #fff3cd; padding: 2px 4px; border-radius: 2px;">$1</mark>');
+        node.parentNode.replaceChild(span, node);
+
+        const highlights = span.querySelectorAll('.search-highlight');
+        highlights.forEach(h => matches.push(h));
+      }
+    }
+
+    if (matches.length > 0) {
+      matches[0].style.backgroundColor = '#ffc107';
+      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    searchContent(e.target.value);
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const query = e.target.value;
+      if (matches.length > 0) {
+        currentMatch = (currentMatch + 1) % matches.length;
+        matches[currentMatch].style.backgroundColor = '#ffc107';
+        matches.forEach((m, i) => {
+          if (i !== currentMatch) m.style.backgroundColor = '#fff3cd';
+        });
+        matches[currentMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+</script>
+</body>
+</html>
+
+
+

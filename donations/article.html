@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <title>MACSIS Donations & Campaigns Guide</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../index.html" class="brand"><img src="../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../registration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../registration/administration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Administration</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1 class="detail-title">MACSIS Donations & Campaigns Guide</h1>
+      <p class="detail-subtitle">Your central reference for navigating MACSIS donation and campaign management tools.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      </div>
+
+      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
+        <p style="margin: 0 0 15px 0; color: var(--gray-800);">The Donations section serves as your central reference for managing every aspect of the donation process across the MAC platform. From creating and configuring fundraising campaigns to monitoring donations and generating reports, this guide walks you through the tools and workflows available within the system.</p>
+        <p style="margin: 0; color: var(--gray-800);">Whether donations are made through the online donation portal, self-service kiosks, or the MAC POS (S700) system, all transactions can be managed from a single, centralized location. This documentation will help you understand how to create campaigns, configure donation settings, track contributions, and ensure a seamless donation experience across all supported platforms.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px;">
+        <!-- CC Donations -->
+        <a href="article-01-cc-donations.html" style="text-decoration: none; color: inherit;">
+          <div style="border: 1px solid var(--gray-200); border-radius: 8px; padding: 25px; transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="margin: 0 0 15px 0; font-size: 16px; color: var(--green);">Credit Card Donations</h3>
+            <p style="margin: 0; color: var(--gray-600); font-size: 14px; line-height: 1.6; flex-grow: 1;">View, filter, and track all credit card donations. Learn about payment processing, refunds, and donation detail pages.</p>
+          </div>
+        </a>
+
+        <!-- e-Transfers -->
+        <a href="article-02-etransfers.html" style="text-decoration: none; color: inherit;">
+          <div style="border: 1px solid var(--gray-200); border-radius: 8px; padding: 25px; transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="margin: 0 0 15px 0; font-size: 16px; color: var(--green);">E-Transfers</h3>
+            <p style="margin: 0; color: var(--gray-600); font-size: 14px; line-height: 1.6; flex-grow: 1;">Manage direct bank transfers and verify deposits. Explore bulk actions and banking data tracking.</p>
+          </div>
+        </a>
+
+        <!-- Campaigns -->
+        <a href="article-03-campaigns.html" style="text-decoration: none; color: inherit;">
+          <div style="border: 1px solid var(--gray-200); border-radius: 8px; padding: 25px; transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="margin: 0 0 15px 0; font-size: 16px; color: var(--green);">Managing Campaigns</h3>
+            <p style="margin: 0; color: var(--gray-600); font-size: 14px; line-height: 1.6; flex-grow: 1;">Create and manage fundraising campaigns. Configure campaign settings, statuses, and campaign management.</p>
+          </div>
+        </a>
+
+        <!-- Refunds -->
+        <a href="article-04-refunds.html" style="text-decoration: none; color: inherit;">
+          <div style="border: 1px solid var(--gray-200); border-radius: 8px; padding: 25px; transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="margin: 0 0 15px 0; font-size: 16px; color: var(--green);">Refunds</h3>
+            <p style="margin: 0; color: var(--gray-600); font-size: 14px; line-height: 1.6; flex-grow: 1;">Learn how to process and manage donation refunds in MACSIS.</p>
+          </div>
+        </a>
+
+        <!-- Subscriptions -->
+        <a href="article-05-subscriptions.html" style="text-decoration: none; color: inherit;">
+          <div style="border: 1px solid var(--gray-200); border-radius: 8px; padding: 25px; transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="margin: 0 0 15px 0; font-size: 16px; color: var(--green);">Subscriptions</h3>
+            <p style="margin: 0; color: var(--gray-600); font-size: 14px; line-height: 1.6; flex-grow: 1;">Manage recurring donations and subscription settings.</p>
+          </div>
+        </a>
+
+        <!-- FAQ -->
+        <a href="article-06-faq.html" style="text-decoration: none; color: inherit;">
+          <div style="border: 1px solid var(--gray-200); border-radius: 8px; padding: 25px; transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="margin: 0 0 15px 0; font-size: 16px; color: var(--green);">FAQ</h3>
+            <p style="margin: 0; color: var(--gray-600); font-size: 14px; line-height: 1.6; flex-grow: 1;">Frequently asked questions about donations and campaigns in MACSIS.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- OLD CONTENT BELOW - TO BE REMOVED -->
+      <div style="display: none;">
+      <div class="accordion open" id="section-01-cc-donations" onclick="toggleSection(this)">
+        <div class="accordion-head"><span>01 Managing Credit Card (CC) Donations</span><i class="fa-solid fa-chevron-up"></i></div>
+        <div class="accordion-body" style="padding: 25px 30px;">
+          <h3 style="margin-bottom: 20px; font-size: 18px;">Donations Module â€“ CC Donations</h3>
+
+          <p style="margin-bottom: 25px;">The <strong>Donations</strong> module, located under the <strong>Finance</strong> tab, serves as the central hub for viewing, filtering, and tracking all financial contributions. The <strong>CC Donations</strong> section specifically displays all online credit card transactions processed through the donation platform.</p>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">Accessing the Donations Module</h4>
+          <ol style="margin-bottom: 30px; line-height: 2;">
+            <li>Sign in to the <strong>MACSIS Admin Panel</strong> using your Microsoft MAC email account: <a href="https://sis3admin.macnet.ca/home">https://sis3admin.macnet.ca/home</a></li>
+            <li>Once you are signed in, locate the <strong>Finance</strong> tab in the left-hand navigation menu (identified by the <strong>$</strong> icon) and expand it.</li>
+            <li>Click <strong>Donations</strong> to view the available options:
+              <ul style="margin-top: 0px; margin-bottom: 0px; padding-top: 5px;">
+                <li><strong>CC Donations</strong></li>
+                <li><strong>E-Transfers</strong></li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">CC Donations</h4>
+          <p style="margin-bottom: 15px;">The <strong>CC Donations</strong> section displays all credit card donations received through the following sources:</p>
+          <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Donation Kiosks</strong> (if your centre has kiosks installed)</li>
+            <li style="margin-bottom: 10px;"><strong>Online Donation Portal</strong> (donations.macnet.ca)</li>
+            <li style="margin-bottom: 10px;"><strong>MAC POS Reader (S700)</strong> (if your centre uses an S700 payment terminal)</li>
+          </ul>
+          <p style="margin-bottom: 25px;">All credit card donations from these sources are consolidated into the <strong>CC Donations</strong> section, making it easy to search, filter, and track donation activity in one place.</p>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">Features & Navigation</h4>
+          <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px;"><strong>Total Donations Badge:</strong> A green summary badge showing the total value of credit card donations based on your current filters.</li>
+            <li style="margin-bottom: 15px;"><strong>Filter Subscription Type:</strong> Sort by monthly or one-time gifts to identify recurring donations.</li>
+            <li style="margin-bottom: 15px;"><strong>Filter Campaign Type:</strong> View funds attributed to a specific initiative or the general pool.</li>
+            <li style="margin-bottom: 15px;"><strong>Search Bar:</strong> Quickly find specific donations by ID, CT Number, name, email, or phone number.</li>
+            <li style="margin-bottom: 15px;"><strong>Sorting:</strong> Sort the data table by any column (such as date or amount) by hovering over the header and clicking the sorting arrow.</li>
+          </ul>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">Data Table Attributes</h4>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 30px;">
+            <tr style="border-bottom: 1px solid var(--gray-200);"><td style="padding: 15px 0; font-weight: 700; width: 30%;">ID</td><td style="padding: 15px 0;">The unique identification number for the transaction.</td></tr>
+            <tr style="border-bottom: 1px solid var(--gray-200);"><td style="padding: 15px 0; font-weight: 700;">Campaign Name</td><td style="padding: 15px 0;">The specific fund or initiative the donor supported.</td></tr>
+            <tr style="border-bottom: 1px solid var(--gray-200);"><td style="padding: 15px 0; font-weight: 700;">Amount</td><td style="padding: 15px 0;">The total dollar value of the processed transaction.</td></tr>
+            <tr style="border-bottom: 1px solid var(--gray-200);"><td style="padding: 15px 0; font-weight: 700;">Donor Info</td><td style="padding: 15px 0;">Contact details provided by the donor at checkout.</td></tr>
+            <tr style="border-bottom: 1px solid var(--gray-200);"><td style="padding: 15px 0; font-weight: 700;">Date</td><td style="padding: 15px 0;">The exact date and time the transaction occurred.</td></tr>
+            <tr><td style="padding: 15px 0; font-weight: 700;">CT Number</td><td style="padding: 15px 0;">The internal audit or campaign tracking number.</td></tr>
+          </table>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">Viewing Donation Details</h4>
+          <p style="margin-bottom: 15px;">Clicking on the <strong>Donation ID</strong> of any row will redirect you to the Donation Detail page. This page contains two key tabs:</p>
+
+          <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px;"><strong>Payments Tab:</strong> Offers more details on the payment and transaction, including a button to refund that donation. For subscription-type donations, this tab displays all payments relevant to the subscription. One-time donations only display one row.</li>
+            <li style="margin-bottom: 15px;"><strong>Refunds Tab:</strong> Provides detailed information on each refund applied to the donations shown in the Payments tab, allowing you to track all refund activity for a specific donation.</li>
+          </ul>
+
+          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 30px; margin-bottom: 30px; text-align: center;">
+            <img src="donation-detail-page.webp" alt="Donation Detail Page" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <p style="margin-top: 15px; font-size: 13px; color: var(--gray-600);">Figure: The Donation Detail page displays donor information at the top, with the Payments and Refunds tabs below for transaction management.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 e-Transfers -->
+      <div class="accordion" id="section-02-etransfers" onclick="toggleSection(this)">
+        <div class="accordion-head"><span>02 Reconciling & Verifying e-Transfers</span><i class="fa-solid fa-chevron-down"></i></div>
+        <div class="accordion-body" style="padding: 25px 30px;">
+          <p style="margin-bottom: 25px;">The e-Transfer tab helps you manage direct bank transfers. Because these are initiated through banking portals rather than an automated gateway, this section allows you to manually verify deposits against our bank records.</p>
+          
+          <h4 style="margin-bottom: 15px; color: var(--green);">Automated Workflow</h4>
+          <ol style="margin-bottom: 30px; line-height: 2;">
+            <li>When a donor sends an e-Transfer, they are emailed an invitation to create a donor profile.</li>
+            <li>You will simultaneously receive a notification email that a new e-Transfer is pending.</li>
+            <li>The transaction appears in the SIS backend, ready for you to review and verify.</li>
+          </ol>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">Available Features</h4>
+          <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px;"><strong>Filter & Add Campaign:</strong> Use this to filter by initiative or manually assign a campaign to a transfer if the donor didn't select one.</li>
+            <li style="margin-bottom: 15px;"><strong>Search:</strong> Locate deposits using the bankâ€™s Reference Number, donor name, or email.</li>
+            <li style="margin-bottom: 15px;"><strong>Bulk Actions:</strong> Use checkboxes to select multiple transactions and apply campaign updates at once.</li>
+          </ul>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">Key Banking Data</h4>
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+            <tr style="border-bottom: 1px solid var(--gray-200);"><td style="padding: 15px 0; font-weight: 700; width: 30%;">Reference Number</td><td style="padding: 15px 0;">The unique confirmation code from the bank â€” essential for verifying successful deposits.</td></tr>
+            <tr style="border-bottom: 1px solid var(--gray-200);"><td style="padding: 15px 0; font-weight: 700;">Message</td><td style="padding: 15px 0;">Notes left by the donor, often including their email or intended campaign.</td></tr>
+            <tr><td style="padding: 15px 0; font-weight: 700;">Account Name</td><td style="padding: 15px 0;">The legal name on the bank account, critical for reconciling business or spousal transfers.</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- 03 Campaigns -->
+      <div class="accordion" id="section-03-campaigns" onclick="toggleSection(this)">
+        <div class="accordion-head"><span>03 Creating & Managing Fundraising Campaigns</span><i class="fa-solid fa-chevron-down"></i></div>
+        <div class="accordion-body" style="padding: 25px 30px;">
+          <p style="margin-bottom: 25px;">The Campaigns module is where you create, view, and manage our fundraising initiatives.</p>
+          
+          <h4 style="margin-bottom: 15px; color: var(--green);">Dashboard Tips</h4>
+          <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px;"><strong>Search:</strong> Find campaigns by name or project.</li>
+            <li style="margin-bottom: 15px;"><strong>Filter Status:</strong> Toggle between active and inactive campaigns.</li>
+            <li style="margin-bottom: 15px;"><strong>Carry-Forward:</strong> Easily migrate legacy campaigns from previous years to the current fiscal year.</li>
+          </ul>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">Creating a New Campaign</h4>
+          <div style="background: #FFF3E0; border: 1px solid #FFE0B2; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <strong>Note:</strong> If you see an alert that "No campaigns found in Business Central," please contact the accounting team to set up the core records before proceeding.
+          </div>
+          
+          <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px; text-align: center;">
+            <img src="add-campaign-form.png" alt="Add Campaign Form" style="max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <p style="margin-top: 15px; font-size: 13px; color: var(--gray-600);">Figure: The Add Campaign form with all required fields for creating a new fundraising campaign.</p>
+          </div>
+
+          <p style="margin-bottom: 15px;">Click the blue '+' button to open the form. Key fields include:</p>
+          <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Type:</strong> Choose Donation or Sale.</li>
+            <li style="margin-bottom: 10px;"><strong>Name/Description:</strong> Provide a clear, public-facing title and summary.</li>
+            <li style="margin-bottom: 10px;"><strong>Identifier:</strong> Select the correct internal audit code.</li>
+            <li style="margin-bottom: 10px;"><strong>Icon:</strong> A graphic is mandatory; missing this will cause a submission error.</li>
+            <li style="margin-bottom: 10px;"><strong>Status:</strong> Check 'Active' to publish; leave unchecked to save as a draft.</li>
+          </ul>
+
+          <h4 style="margin-bottom: 15px; color: var(--green);">Editing Campaigns</h4>
+          <ol style="line-height: 2;">
+            <li>Select the campaign from your dashboard.</li>
+            <li>Click the blue <strong>Edit</strong> button to open the settings.</li>
+            <li>Update your information and click <strong>Save</strong> to publish your changes.</li>
+          </ol>
+        </div>
+      </div>
+      </div>
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+    <p>Â© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  function toggleSection(element) {
+    element.classList.toggle('open');
+    const icon = element.querySelector('.accordion-head i');
+    icon.className = element.classList.contains('open') ? 'fa-solid fa-chevron-up' : 'fa-solid fa-chevron-down';
+  }
+
+  // Search functionality
+  const searchInput = document.getElementById('search-input');
+  let currentMatch = 0;
+  let matches = [];
+
+  function clearHighlights() {
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      while (el.firstChild) {
+        parent.insertBefore(el.firstChild, el);
+      }
+      parent.removeChild(el);
+    });
+  }
+
+  function searchContent(query) {
+    clearHighlights();
+    matches = [];
+    currentMatch = 0;
+
+    if (!query.trim()) return;
+
+    const mainContent = document.querySelector('main');
+    const walker = document.createTreeWalker(
+      mainContent,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    let node;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+    while (node = walker.nextNode()) {
+      if (regex.test(node.textContent)) {
+        const span = document.createElement('span');
+        span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight" style="background-color: #fff3cd; padding: 2px 4px; border-radius: 2px;">$1</mark>');
+        node.parentNode.replaceChild(span, node);
+
+        const highlights = span.querySelectorAll('.search-highlight');
+        highlights.forEach(h => matches.push(h));
+      }
+    }
+
+    if (matches.length > 0) {
+      matches[0].style.backgroundColor = '#ffc107';
+      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    searchContent(e.target.value);
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const query = e.target.value;
+      if (matches.length > 0) {
+        currentMatch = (currentMatch + 1) % matches.length;
+        matches[currentMatch].style.backgroundColor = '#ffc107';
+        matches.forEach((m, i) => {
+          if (i !== currentMatch) m.style.backgroundColor = '#fff3cd';
+        });
+        matches[currentMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+</script>
+</body>
+</html>
