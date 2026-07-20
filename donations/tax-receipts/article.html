@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../../styles.css">
-  <title>Enrollment</title>
+  <title>Tax Receipts</title>
 </head>
 <body>
 
@@ -30,9 +30,9 @@
       <a href="../../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
       <div class="sidebar-section">
         <div class="sidebar-section-label">MACSIS</div>
-        <a href="../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
-        <a href="../article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
-        <a href="../administration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Administration</a>
+        <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../../registration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../../registration/administration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Administration</a>
         <a href="../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
       </div>
     </aside>
@@ -40,12 +40,12 @@
     <main class="main">
       <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
         <a href="../article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
-          <i class="fa-solid fa-chevron-left"></i> Back to Student Registration
+          <i class="fa-solid fa-chevron-left"></i> Back to Donations & Campaigns
         </a>
       </div>
 
-      <h1 class="detail-title">Enrollment</h1>
-      <p class="detail-subtitle">Manage student enrollment and enrollment records.</p>
+      <h1 class="detail-title">Tax Receipts</h1>
+      <p class="detail-subtitle">Generate and manage tax receipts for donors.</p>
 
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
@@ -53,7 +53,7 @@
       </div>
 
       <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for Enrollment management coming soon.</p>
+        <p style="margin: 0; color: var(--gray-800);">Content for Tax Receipts coming soon.</p>
       </div>
     </main>
   </div>
@@ -66,21 +66,70 @@
 <script>
   document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
 
-  // Global search functionality
+  // Search functionality
   const searchInput = document.getElementById('search-input');
+  let currentMatch = 0;
+  let matches = [];
+
+  function clearHighlights() {
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      while (el.firstChild) {
+        parent.insertBefore(el.firstChild, el);
+      }
+      parent.removeChild(el);
+    });
+  }
+
+  function searchContent(query) {
+    clearHighlights();
+    matches = [];
+    currentMatch = 0;
+
+    if (!query.trim()) return;
+
+    const mainContent = document.querySelector('main');
+    const walker = document.createTreeWalker(
+      mainContent,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    let node;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+    while (node = walker.nextNode()) {
+      if (regex.test(node.textContent)) {
+        const span = document.createElement('span');
+        span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight" style="background-color: #fff3cd; padding: 2px 4px; border-radius: 2px;">$1</mark>');
+        node.parentNode.replaceChild(span, node);
+
+        const highlights = span.querySelectorAll('.search-highlight');
+        highlights.forEach(h => matches.push(h));
+      }
+    }
+
+    if (matches.length > 0) {
+      matches[0].style.backgroundColor = '#ffc107';
+      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
 
   searchInput.addEventListener('input', (e) => {
-    if (e.target.value.trim()) {
-      window.location.href = '../../search.html?q=' + encodeURIComponent(e.target.value);
-    }
+    searchContent(e.target.value);
   });
 
   searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-      e.preventDefault();
-      const query = e.target.value.trim();
-      if (query) {
-        window.location.href = '../../search.html?q=' + encodeURIComponent(query);
+      const query = e.target.value;
+      if (matches.length > 0) {
+        currentMatch = (currentMatch + 1) % matches.length;
+        matches[currentMatch].style.backgroundColor = '#ffc107';
+        matches.forEach((m, i) => {
+          if (i !== currentMatch) m.style.backgroundColor = '#fff3cd';
+        });
+        matches[currentMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
   });

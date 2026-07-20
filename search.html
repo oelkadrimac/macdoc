@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Search Results – MAC Guide</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="index.html" class="brand"><img src="mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search across all guides..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="registration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="registration/administration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Administration</a>
+        <a href="powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h1 class="hub-title">Search Results</h1>
+      <div id="search-results" style="margin-top: 40px;">
+        <p style="color: var(--gray-600);">Enter a search term to find results across all guides.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  // Global search index
+  const searchIndex = [
+    { title: 'Credit Card Donations', url: 'donations/article-01-cc-donations.html', keywords: 'credit card donations cc donations payment processing refunds' },
+    { title: 'Tax Receipts', url: 'donations/tax-receipts/article.html', keywords: 'tax receipts donor receipts tax documentation' },
+    { title: 'E-Transfers', url: 'donations/article-02-etransfers.html', keywords: 'e-transfers bank transfers deposits' },
+    { title: 'Managing Campaigns', url: 'donations/article-03-campaigns.html', keywords: 'campaigns fundraising campaigns management' },
+    { title: 'Refunds', url: 'donations/article-04-refunds.html', keywords: 'refunds donation refunds' },
+    { title: 'Subscriptions', url: 'donations/article-05-subscriptions.html', keywords: 'subscriptions recurring donations' },
+    { title: 'Kiosks', url: 'donations/kiosks/article.html', keywords: 'donation kiosks self-service kiosks' },
+    { title: 'MAC POS', url: 'donations/mac-pos/article.html', keywords: 'mac pos point of sale pos system' },
+    { title: 'Donation Portal', url: 'donations/donation-portal/article.html', keywords: 'donation portal online donations' },
+    { title: 'Donations & Campaigns', url: 'donations/article.html', keywords: 'donations campaigns fundraising' },
+    { title: 'Student Medical Records', url: 'registration/student-medical-records/article.html', keywords: 'medical records student health' },
+    { title: 'Waiting List', url: 'registration/waiting-list/article.html', keywords: 'waiting list students' },
+    { title: 'Applicants', url: 'registration/applicants/article.html', keywords: 'applicants student applications' },
+    { title: 'Enrollment', url: 'registration/enrollment/article.html', keywords: 'enrollment student enrollment' },
+    { title: 'Incomplete Registration', url: 'registration/incomplete-registration/article.html', keywords: 'incomplete registration unfinished registration' },
+    { title: 'Student Registration FAQ', url: 'registration/faq/article.html', keywords: 'faq frequently asked questions registration' },
+    { title: 'Student Registration', url: 'registration/article.html', keywords: 'student registration enrollment' },
+    { title: 'Charges', url: 'registration/administration/charges/article.html', keywords: 'charges fees registration charges' },
+    { title: 'Payment Type', url: 'registration/administration/payment-type/article.html', keywords: 'payment type payment methods' },
+    { title: 'Discounts', url: 'registration/administration/discounts/article.html', keywords: 'discounts discount codes' },
+    { title: 'Codes', url: 'registration/administration/codes/article.html', keywords: 'codes system codes' },
+    { title: 'School Activities', url: 'registration/administration/school-activities/article.html', keywords: 'school activities programs' },
+    { title: 'Billing', url: 'registration/administration/billing/article.html', keywords: 'billing invoicing invoices' },
+    { title: 'Payment Errors', url: 'registration/administration/payment-errors/article.html', keywords: 'payment errors payment issues' },
+    { title: 'Administration', url: 'registration/administration/article.html', keywords: 'administration settings configuration' },
+    { title: 'PowerSchool Enrollment', url: 'powerschool/enrollment/article.html', keywords: 'enrollment powerschool student enrollment' },
+    { title: 'Report Cards', url: 'powerschool/report-cards/article.html', keywords: 'report cards grades academic records' },
+    { title: 'User Access', url: 'powerschool/user-access/article.html', keywords: 'user access permissions access controls' },
+    { title: 'PowerSchool', url: 'powerschool/article.html', keywords: 'powerschool student information system' }
+  ];
+
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  function getSearchQuery() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('q') || '';
+  }
+
+  function performSearch(query) {
+    if (!query.trim()) {
+      searchResults.innerHTML = '<p style="color: var(--gray-600);">Enter a search term to find results across all guides.</p>';
+      return;
+    }
+
+    const queryLower = query.toLowerCase();
+    const results = searchIndex.filter(item => {
+      return item.title.toLowerCase().includes(queryLower) ||
+             item.keywords.toLowerCase().includes(queryLower);
+    });
+
+    if (results.length === 0) {
+      searchResults.innerHTML = `<p style="color: var(--gray-600);">No results found for "<strong>${query}</strong>". Try different keywords.</p>`;
+      return;
+    }
+
+    let html = `<p style="color: var(--gray-600); margin-bottom: 20px;">Found <strong>${results.length}</strong> result${results.length !== 1 ? 's' : ''} for "<strong>${query}</strong>"</p>`;
+    html += '<div style="display: flex; flex-direction: column; gap: 15px;">';
+
+    results.forEach(result => {
+      html += `
+        <a href="${result.url}" style="text-decoration: none; color: inherit;">
+          <div style="border: 1px solid var(--gray-200); border-radius: 8px; padding: 20px; transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column; height: 100%;">
+            <h3 style="margin: 0 0 10px 0; font-size: 16px; color: var(--green);">${result.title}</h3>
+            <p style="margin: 0; color: var(--gray-600); font-size: 14px;">View this article</p>
+          </div>
+        </a>
+      `;
+    });
+
+    html += '</div>';
+    searchResults.innerHTML = html;
+  }
+
+  // Search on page load
+  const initialQuery = getSearchQuery();
+  if (initialQuery) {
+    searchInput.value = initialQuery;
+    performSearch(initialQuery);
+  }
+
+  // Search as user types
+  searchInput.addEventListener('input', (e) => {
+    performSearch(e.target.value);
+  });
+
+  // Handle Enter key
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      performSearch(e.target.value);
+    }
+  });
+
+  // Focus on input
+  searchInput.focus();
+</script>
+</body>
+</html>

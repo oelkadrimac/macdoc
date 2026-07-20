@@ -33,6 +33,7 @@
         <a href="../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
         <a href="../article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
         <a href="../administration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Administration</a>
+        <a href="../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
       </div>
     </aside>
 
@@ -65,70 +66,21 @@
 <script>
   document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
 
-  // Search functionality
+  // Global search functionality
   const searchInput = document.getElementById('search-input');
-  let currentMatch = 0;
-  let matches = [];
-
-  function clearHighlights() {
-    document.querySelectorAll('.search-highlight').forEach(el => {
-      const parent = el.parentNode;
-      while (el.firstChild) {
-        parent.insertBefore(el.firstChild, el);
-      }
-      parent.removeChild(el);
-    });
-  }
-
-  function searchContent(query) {
-    clearHighlights();
-    matches = [];
-    currentMatch = 0;
-
-    if (!query.trim()) return;
-
-    const mainContent = document.querySelector('main');
-    const walker = document.createTreeWalker(
-      mainContent,
-      NodeFilter.SHOW_TEXT,
-      null,
-      false
-    );
-
-    let node;
-    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-
-    while (node = walker.nextNode()) {
-      if (regex.test(node.textContent)) {
-        const span = document.createElement('span');
-        span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight" style="background-color: #fff3cd; padding: 2px 4px; border-radius: 2px;">$1</mark>');
-        node.parentNode.replaceChild(span, node);
-
-        const highlights = span.querySelectorAll('.search-highlight');
-        highlights.forEach(h => matches.push(h));
-      }
-    }
-
-    if (matches.length > 0) {
-      matches[0].style.backgroundColor = '#ffc107';
-      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }
 
   searchInput.addEventListener('input', (e) => {
-    searchContent(e.target.value);
+    if (e.target.value.trim()) {
+      window.location.href = '../../search.html?q=' + encodeURIComponent(e.target.value);
+    }
   });
 
   searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-      const query = e.target.value;
-      if (matches.length > 0) {
-        currentMatch = (currentMatch + 1) % matches.length;
-        matches[currentMatch].style.backgroundColor = '#ffc107';
-        matches.forEach((m, i) => {
-          if (i !== currentMatch) m.style.backgroundColor = '#fff3cd';
-        });
-        matches[currentMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      e.preventDefault();
+      const query = e.target.value.trim();
+      if (query) {
+        window.location.href = '../../search.html?q=' + encodeURIComponent(query);
       }
     }
   });
