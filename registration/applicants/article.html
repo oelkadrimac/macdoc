@@ -52,9 +52,82 @@
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
       </div>
 
-      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for Applicants management coming soon.</p>
-      </div>
+      <p style="margin-bottom: 25px; line-height: 1.6;">
+        The <strong>Applicants</strong> section serves as the central management hub for reviewing, evaluating, and processing incoming student registrations within MACSIS. From this dashboard, administrators can sort through application queues, verify financial details, request document updates, and transition students into active enrollment.
+      </p>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">How do I access the Applicants section?</h3>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        You can navigate to the applicants dashboard easily using either of these paths:
+      </p>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Via the Student Registration Hub:</strong> From the main dashboard view, click on <strong>Student Registration</strong> in the left sidebar or directory, then select the <strong>Applicants</strong> card.</li>
+        <li><strong>Via the Students Menu:</strong> Expand <strong>Students Info</strong> on the left-hand sidebar, click on <strong>Students</strong>, and ensure you are on the <strong>Applicants</strong> tab along the top filter bar of the student list.</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">How do I navigate the dashboard and manage settings?</h3>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Switching Schools:</strong> Located in the top right corner right next to the admin profile button, the <strong>School Selector Dropdown</strong> allows you to switch the school you are currently managing. This enables you to easily oversee records for multiple different schools from a single login.</li>
+        <li><strong>Filtering Admission Stages:</strong> At the top of the student list, quick-access filter tabs let you switch seamlessly between different stages, including <strong>Waiting list</strong>, <strong>Applicants</strong>, <strong>Ready to Enroll</strong>, <strong>Enrolled</strong>, <strong>Registered</strong>, <strong>Withdrawn</strong>, <strong>All</strong>, <strong>Incomplete</strong>, and <strong>Requested to resubmit</strong>.</li>
+        <li><strong>Executing Bulk Actions:</strong> Located at the top left of the table, the <strong>Select Action Dropdown</strong> allows administrators to execute batch actions across multiple selected student records simultaneously.</li>
+        <li><strong>Reading Table Columns:</strong> The main directory displays essential applicant details at a glance:
+          <ul style="margin-top: 5px; margin-bottom: 5px; padding-left: 20px;">
+            <li><strong>Student ID:</strong> Click to open the full student profile view.</li>
+            <li><strong>Name & Demographics:</strong> First Name, Last Name, Gender, Email, and Age.</li>
+            <li><strong>Application Details:</strong> Applied Date and Grade Applied.</li>
+            <li><strong>Payment Status:</strong> Financial standing indicator (e.g., <strong>Paid</strong> or <strong>Refunded</strong>).</li>
+            <li><strong>Step Column:</strong> Visible in the <strong>Requested to resubmit</strong> tab, showing the exact workflow step (e.g., Step 0, Step 4) requiring attention.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">How do I handle document resubmissions and withdrawals?</h3>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Requesting Document Resubmissions:</strong>
+          <ol style="margin-top: 5px; margin-bottom: 5px; padding-left: 20px;">
+            <li>Open the student's profile and navigate to the <strong>Documents</strong> tab.</li>
+            <li>Click the <strong>Request Document(s)</strong> button in the top right to open the <strong>Request to Resubmit</strong> modal.</li>
+            <li>Select the specific missing files required from the applicant.</li>
+            <li><em>[In Progress: Clarifying the exact system action or workflow trigger required to route an application into the "Requested to resubmit" tab view.]</em></li>
+          </ol>
+        </li>
+        <li><strong>Handling Withdrawals:</strong> When a student's status is set to withdrawn, the application is officially closed and archived. No further operational actions are required aside from downloading their records for institutional archiving.</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What information is available inside the Student Profile?</h3>
+      <p style="margin-bottom: 20px; line-height: 1.6;">
+        Clicking a student's ID opens a detailed profile layout organized into six distinct tabs, allowing you to examine different facets of their application:
+      </p>
+
+      <h4 style="color: var(--gray-800); margin-top: 20px; margin-bottom: 6px; font-size: 16px; font-weight: 600;">Personal Tab</h4>
+      <p style="margin-bottom: 16px; line-height: 1.6;">
+        Houses core biographical data, contact details, home address, Canadian legal status, and <strong>External Systems Integrations</strong> tracking identifiers (PowerSchool Student Number, State Student Number, Customer Number, and Primary Constituent Numbers like <code>CT-000115427</code>). A comment box at the bottom lets you log internal notes.
+      </p>
+
+      <h4 style="color: var(--gray-800); margin-top: 20px; margin-bottom: 6px; font-size: 16px; font-weight: 600;">Parent/Guardian Tab</h4>
+      <p style="margin-bottom: 16px; line-height: 1.6;">
+        Displays primary guardian contact information, email addresses, and emergency contact details linked to the family.
+      </p>
+
+      <h4 style="color: var(--gray-800); margin-top: 20px; margin-bottom: 6px; font-size: 16px; font-weight: 600;">Education History Tab</h4>
+      <p style="margin-bottom: 16px; line-height: 1.6;">
+        Outlines the student's previous school name, previous grade, school address, Individual Education Program (IEP) status, and suspension or expulsion history.
+      </p>
+
+      <h4 style="color: var(--gray-800); margin-top: 20px; margin-bottom: 6px; font-size: 16px; font-weight: 600;">Health & Medical Tab</h4>
+      <p style="margin-bottom: 16px; line-height: 1.6;">
+        Captures critical health details, including physical conditions, allergies, Epi-Pen requirements, medical disclosures, dietary restrictions, continuous medications, asthma info, immunization records, and behavioral or cognitive notes.
+      </p>
+
+      <h4 style="color: var(--gray-800); margin-top: 20px; margin-bottom: 6px; font-size: 16px; font-weight: 600;">Registration Tab</h4>
+      <p style="margin-bottom: 16px; line-height: 1.6;">
+        Details the requested program type, semester information, parent comments, and a chronological <strong>Logs</strong> audit trail tracking application milestones (such as the <em>Application Submitted</em> timestamp).
+      </p>
+
+      <h4 style="color: var(--gray-800); margin-top: 20px; margin-bottom: 6px; font-size: 16px; font-weight: 600;">Documents Tab</h4>
+      <p style="margin-bottom: 25px; line-height: 1.6;">
+        Acts as the centralized repository for all uploaded applicant files (Birth/Immigration Certificates, Health Cards, Report Cards, Photos, Custody Documents, Void Cheques, Medical forms, Immunization Records, Financial/Parental Agreements, and OTSLP Documents), alongside the <strong>Request Document(s)</strong> function.
+      </p>
     </main>
   </div>
 
