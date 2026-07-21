@@ -52,11 +52,73 @@
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
       </div>
 
-      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for Enrollment management coming soon.</p>
+      <p style="margin-bottom: 25px; line-height: 1.6;">
+        The <strong>Enrollment</strong> tabs within the student management panel allow administrators to transition qualified candidates—transferred from the Applicants section first—into active school rosters, track student placements, and manage active versus completed enrollment statuses.
+      </p>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What is the difference between Enrolled and Registered?</h3>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Enrolled:</strong> Holds students who have been transferred from the Applicants section through the admissions pipeline and processed via the "Enroll" action from the <strong>Ready to Enroll</strong> tab. Students can be enrolled even if their payment is still pending (triggering a confirmation prompt noting that some students haven't completed payment yet). The table in this tab includes an <strong>Enroll</strong> column displaying specific class, grade, subject, and section details (e.g., <code>bostonGrade01 bostonsubject01 bostonSection01</code>). From here, administrators can perform further actions like registering students, transferring schools, assigning homerooms, or adding charges.</li>
+        <li><strong>Registered:</strong> Represents students who have fully completed all official registration and final onboarding steps in the system.</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">How do I enroll students from the "Ready to Enroll" tab?</h3>
+      <ol style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li>Navigate to the <strong>Ready to Enroll</strong> tab under the student management panel (where candidates arrive after being transferred from the Applicants section).</li>
+        <li>Select the checkbox next to the desired student record(s).</li>
+        <li>Open the <strong>Select Action</strong> dropdown menu at the top-left of the table and choose <strong>Enroll</strong>.</li>
+        <li>Click the <strong>Apply</strong> button.</li>
+        <li><strong>Payment Warning Prompt:</strong> If any selected student has not yet completed their payment, a confirmation modal will appear stating: <em>"There are 1 or more students who haven't completed the payment yet. Do yo want to perform the 'Enroll' action.?"</em> Click <strong>OK</strong> to proceed or <strong>Cancel</strong> to abort.</li>
+      </ol>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What actions are available in the Ready to Enroll tab?</h3>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        Using the <strong>Select Action</strong> dropdown menu in the <strong>Ready to Enroll</strong> tab, administrators can execute operations such as:
+      </p>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Enroll:</strong> Moves candidates into the enrollment phase.</li>
+        <li><strong>Re-Enroll:</strong> Re-enrolls existing or returning student records. When triggered, a notification popup appears stating <em>"Re-Enrolment Initiated. You will get a mail shortly. You may export the log."</em>, which includes an option to download/export the activity log.</li>
+        <li><strong>Withdraw:</strong> Closes and archives student applications.</li>
+        <li><strong>Transfer:</strong> Transfers student records to another school.</li>
+        <li><strong>Add Charge:</strong> Applies financial charges to student accounts.</li>
+        <li><strong>Download Profile:</strong> Downloads student profile documentation.</li>
+        <li><strong>Download Documents:</strong> Downloads uploaded files and documents associated with the student.</li>
+        <li><strong>Move To Wait List:</strong> Reassigns students back to the waiting list.</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What actions and features are available in the Enrolled tab?</h3>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        In the <strong>Enrolled</strong> tab, administrators can manage active student enrollments and view key details such as student ID, name, class placement details under the <strong>Enroll</strong> column, gender, email, language, age, applied date, grade applied, and payment status.
+      </p>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        The <strong>Actions</strong> column provides quick access icons for:
+      </p>
+      <ul style="margin-bottom: 15px; line-height: 1.8; padding-left: 20px;">
+        <li>Opening student communication/internal notes.</li>
+        <li>Viewing and editing the full student profile.</li>
+        <li>Downloading student data and documents.</li>
+      </ul>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        Additionally, selecting records in the <strong>Enrolled</strong> tab and opening the <strong>Select Action</strong> dropdown provides options such as:
+      </p>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Enroll</strong></li>
+        <li><strong>Register</strong></li>
+        <li><strong>Withdraw</strong></li>
+        <li><strong>Transfer:</strong> Transfers student records to another school.</li>
+        <li><strong>Assign Homeroom</strong></li>
+        <li><strong>Add Charge</strong></li>
+        <li><strong>Export Enrollments</strong></li>
+        <li><strong>Download Profile</strong></li>
+        <li><strong>Download Documents</strong></li>
+      </ul>
+
+      <div style="background-color: var(--gray-50); border-left: 4px solid var(--green); padding: 16px; margin: 25px 0; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.6;">
+        <strong>Note:</strong> Ensure payment statuses and class placements are reviewed regularly during the enrollment and registration workflows.
       </div>
     </main>
   </div>
+  
 
   <footer class="site-footer">
     <p>© 2026 Muslim Association of Canada.</p>
