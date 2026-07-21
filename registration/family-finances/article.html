@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <title>Family Finances & Charges</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../../index.html" class="brand"><img src="../../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="../article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Student Registration
+        </a>
+      </div>
+
+      <h1 class="detail-title">Family Finances & Charges</h1>
+      <p class="detail-subtitle">Manage household billing records, family details, and payment workflows.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      </div>
+
+      <p style="margin-bottom: 25px; line-height: 1.6;">
+        The <strong>Family Detail</strong> page acts as the central financial and household management hub in MACSIS. Accessible via the <strong>Finance</strong> section within a student profile, this view allows administrators to oversee household billing, sibling discounts, collection methods, and transactional records across all family members enrolled in the school.
+      </p>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">How do I access family financial details?</h3>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        To open the Family Detail financial dashboard:
+      </p>
+      <ul style="margin-bottom: 20px; line-height: 1.8; padding-left: 20px;">
+        <li>Open an individual student profile from the student application panel.</li>
+        <li>Locate the bottom quick-navigation section, click on the <strong>Finance</strong> tab, and select the <strong>Charges</strong> link.</li>
+      </ul>
+      <div style="margin: 20px 0;">
+        <img src="find-family-finances.png" alt="Finding Family Financial Details" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--gray-200);" />
+      </div>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What is displayed in the Household Overview?</h3>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        The top header section of the Family Detail page summarizes core household information:
+      </p>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Parent & Address Information:</strong> Displays the names and contact details for the <strong>Father</strong> and <strong>Mother</strong>, alongside the shared household <strong>Address</strong>.</li>
+        <li><strong>Students List:</strong> Lists all sibling student records linked to the household within the school.</li>
+        <li><strong>Student Records Link:</strong> Administrators can use the <strong>Manage Students</strong> link to quickly adjust student associations.</li>
+        <li><strong>EFT Details Status:</strong> Displays the electronic funds transfer verification status with an edit option.</li>
+      </ul>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">How do I add and manage charges?</h3>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        The main <strong>Charges</strong> tab organizes all billing line items associated with the family:
+      </p>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Adding New Charges:</strong> Click the plus sign (<strong>+</strong>) operation button located at the top-right corner of the charges table to open the <strong>Add Charge</strong> modal. Complete the required fields—including <strong>Select Student*</strong>, <strong>Charges Type*</strong>, <strong>Amount</strong>, and <strong>Due Date*</strong>—along with any optional <strong>Remarks</strong>, then click <strong>Add</strong>.</li>
+        <li><strong>Table Directory:</strong> Tracks essential data including Charge Id, Charge Type, Student Name, Amount, Discount, Balance, Due Date, School Year, Status, BC Status, and Invoice For.</li>
+        <li><strong>Individual Actions:</strong> Update payment routing methods for individual charges by clicking the action buttons on the right side of the table row to <strong>Modify Collection Method</strong> (supporting options such as <strong>Cash</strong>, <strong>Cheque</strong>, <strong>Debit/Credit Card</strong>, <strong>Education Fund</strong>, and <strong>Credit Card</strong>).</li>
+        <li><strong>Action Menu Options:</strong> Using the <strong>Select Action</strong> dropdown menu above the table, administrators can perform actions on a single item or across multiple selected items in bulk:
+          <ul style="margin-top: 5px; margin-bottom: 5px; padding-left: 20px;">
+            <li><strong>Cancel:</strong> Cancels selected or individual charges.</li>
+            <li><strong>Modify Discount:</strong> Applies or adjusts discounts (such as sibling discounts).</li>
+            <li><strong>Remove Discount:</strong> Clears previously applied discounts.</li>
+            <li><strong>Send Email:</strong> Dispatches billing notices to parents.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <div style="background-color: var(--gray-50); border-left: 4px solid var(--green); padding: 16px; margin: 25px 0; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.6;">
+        <strong>Note:</strong> For any type of discounts, you MUST contact the Accounting Team.
+      </div>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What other financial tabs are available?</h3>
+      <p style="margin-bottom: 15px; line-height: 1.6;">
+        The lower section of the page features specialized tabs for comprehensive auditing and tracking:
+      </p>
+      <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
+        <li><strong>Payments:</strong> Tracks historical payment records, transaction numbers, payment types, amounts, and statuses.</li>
+        <li><strong>Credit Memo:</strong> Displays issued credit memos, invoice balances, and memo amounts.</li>
+        <li><strong>Refunds:</strong> Details processed refunds, refund dates, and transaction references.</li>
+        <li><strong>Orphan Payments:</strong> Houses unallocated payments that require manual matching to specific charges.</li>
+        <li><strong>Orphan Credit Memos:</strong> Lists unassigned credit memos awaiting review and allocation.</li>
+      </ul>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  const searchInput = document.getElementById('search-input');
+
+  searchInput.addEventListener('input', (e) => {
+    if (e.target.value.trim()) {
+      window.location.href = '../../search.html?q=' + encodeURIComponent(e.target.value);
+    }
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const query = e.target.value.trim();
+      if (query) {
+        window.location.href = '../../search.html?q=' + encodeURIComponent(query);
+      }
+    }
+  });
+</script>
+</body>
+</html>
