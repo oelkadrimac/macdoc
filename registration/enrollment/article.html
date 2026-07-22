@@ -50,17 +50,25 @@
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
-    </div>
+   </div>
 
       <p style="margin-bottom: 25px; line-height: 1.6;">
-        The <strong>Enrollment</strong> tabs within the student management panel allow administrators to transition qualified candidates—transferred from the Applicants section first—into active school rosters, track student placements, and manage active versus completed enrollment statuses.
+        The Enrollment tabs within the student management panel allow administrators to transition qualified candidates—transferred from the Applicants section first—into active school rosters, track student placements, and manage active versus completed enrollment statuses.
       </p>
 
       <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What is the difference between Enrolled and Registered?</h3>
       <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
-        <li><strong>Enrolled:</strong> Holds students who have been transferred from the Applicants section through the admissions pipeline and processed via the "Enroll" action from the <strong>Ready to Enroll</strong> tab. Students can be enrolled even if their payment is still pending (triggering a confirmation prompt noting that some students haven't completed payment yet). The table in this tab includes an <strong>Enroll</strong> column displaying specific class, grade, subject, and section details (e.g., <code>bostonGrade01 bostonsubject01 bostonSection01</code>). From here, administrators can perform further actions like registering students, transferring schools, assigning homerooms, or adding charges.</li>
-        <li><strong>Registered:</strong> Represents students who have fully completed all official registration and final onboarding steps in the system.</li>
+        <li><strong>Enrolled:</strong> Students who have cleared their required fees, moved past the applicant stage, and been assigned to specific classes, grades, and sections (e.g., <code>bostonGrade01 bostonsubject01 bostonSection01</code>). Admins can continue enrolling students in additional classes from this tab using the available <strong>Enroll</strong> action. From here, administrators can also register students, assign homerooms, or transfer schools.</li>
+        <li><strong>Registered:</strong> Students who have fully completed all official registration and final onboarding steps in the system. Even at this stage, the <strong>Enroll</strong> action remains available if they need to be signed up for additional classes.</li>
       </ul>
+
+      <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">Fee Requirements & Incomplete Status</h3>
+<p style="margin-bottom: 15px; line-height: 1.6;">
+  Students with unpaid mandatory fees cannot be enrolled right away. Instead, they stay in the <strong>Incomplete</strong> tab until those fees are cleared.
+</p>
+<p style="margin-bottom: 25px; line-height: 1.6;">
+  You do not need to collect the full program fee upfront. However, essential baseline costs—such as the <strong>application fee</strong>—must be paid in full before a student can move out of the Incomplete status and into the enrollment workflow.
+</p>
 
       <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">How do I enroll students from the "Ready to Enroll" tab?</h3>
       <ol style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
@@ -70,12 +78,6 @@
         <li>Click the <strong>Apply</strong> button.</li>
         <li><strong>Class & Section Assignment:</strong> You will be prompted to assign the student to specific class, grade, subject, and section details (e.g., <code>bostonGrade01 bostonsubject01 bostonSection01</code>). You can enroll students in multiple classes using this assignment workflow.</li>
       </ol>
-
-      <div id="important-note" style="background: #FFF3E0; border: 1px solid #FFE0B2; padding: 20px; border-radius: 8px; margin-top: 30px; margin-bottom: 30px;">
-        <h4 style="margin-top: 0; color: var(--green);">Payment Warning Prompt</h4>
-        <p style="margin-bottom: 15px;">If any selected student has not yet completed their payment, a confirmation modal will appear stating: <em>"There are 1 or more students who haven't completed the payment yet. Do you want to perform the 'Enroll' action.?"</em></p>
-        <p style="margin: 0;">Click <strong>OK</strong> to proceed or <strong>Cancel</strong> to abort.</p>
-      </div>
 
       <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What actions are available in the Ready to Enroll tab?</h3>
       <p style="margin-bottom: 15px; line-height: 1.6;">
@@ -91,6 +93,10 @@
         <li><strong>Download Documents:</strong> Downloads uploaded files and documents associated with the student.</li>
         <li><strong>Move To Wait List:</strong> Reassigns students back to the waiting list.</li>
       </ul>
+      <div style="margin: 25px 0; text-align: center;">
+        <img src="ready-to-enroll-table.png" alt="MACSIS Ready to Enroll Table View" style="max-width: 100%; border: 1px solid var(--gray-300); border-radius: 6px;" />
+        <p style="font-size: 13px; color: var(--gray-600); margin-top: 8px;">Figure: Overview of the Ready to Enroll tab and student selection options.</p>
+      </div>
 
       <h3 style="color: var(--green); margin-top: 30px; margin-bottom: 12px; font-size: 18px; font-weight: 600;">What actions and features are available in the Enrolled tab?</h3>
       <p style="margin-bottom: 15px; line-height: 1.6;">
@@ -108,7 +114,7 @@
         Additionally, selecting records in the <strong>Enrolled</strong> tab and opening the <strong>Select Action</strong> dropdown provides options such as:
       </p>
       <ul style="margin-bottom: 25px; line-height: 1.8; padding-left: 20px;">
-        <li><strong>Enroll</strong></li>
+        <li><strong>Enroll:</strong> Continue enrolling students in additional classes.</li>
         <li><strong>Register</strong></li>
         <li><strong>Withdraw</strong></li>
         <li><strong>Transfer:</strong> Transfers student records to another school.</li>
@@ -118,9 +124,13 @@
         <li><strong>Download Profile</strong></li>
         <li><strong>Download Documents</strong></li>
       </ul>
+      <div style="margin: 25px 0; text-align: center;">
+        <img src="enrolled-table.png" alt="MACSIS Enrolled Table View" style="max-width: 100%; border: 1px solid var(--gray-300); border-radius: 6px;" />
+        <p style="font-size: 13px; color: var(--gray-600); margin-top: 8px;">Figure: Overview of active student enrollments and class placement columns.</p>
+      </div>
 
       <div style="background-color: var(--gray-50); border-left: 4px solid var(--green); padding: 16px; margin: 25px 0; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.6;">
-        <strong>Note:</strong> Ensure class assignments and payment statuses are reviewed regularly during the enrollment and registration workflows.
+        <strong>Note:</strong> Ensure class assignments and prerequisite fee clearances are reviewed regularly during enrollment and registration workflows.
       </div>
     </main>
   </div>
