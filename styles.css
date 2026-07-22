@@ -211,3 +211,29 @@ button, input { font-family: inherit; }
 .site-footer { text-align: center; padding: 30px 20px 34px; border-top: 1px solid var(--gray-200); margin-top: auto; }
 .site-footer img { height: 22px; margin-bottom: 10px; opacity: .9; }
 .site-footer p { font-size: 12px; color: var(--gray-400); margin: 2px 0; }
+
+/* ---------- Article Video Footer ---------- */
+.article-video-footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.article-video-footer h3 {
+    font-family: var(--font-serif);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    color: var(--ink);
+}
+
+.article-video-footer video {
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 18px rgba(18, 77, 43, 0.09);
+    display: inline-block;
+    background: var(--ink);
+}
