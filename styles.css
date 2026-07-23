@@ -212,23 +212,15 @@ button, input { font-family: inherit; }
 .site-footer img { height: 22px; margin-bottom: 10px; opacity: .9; }
 .site-footer p { font-size: 12px; color: var(--gray-400); margin: 2px 0; }
 
-/* ---------- Article Video Footer ---------- */
-.article-video-footer {
+/* ---------- Article Video Top ---------- */
+.article-video-top {
     text-align: center;
-    margin-top: 48px;
-    padding-top: 32px;
-    border-top: 1px solid var(--gray-200);
+    margin: 24px 0 32px 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-200);
 }
 
-.article-video-footer h3 {
-    font-family: var(--font-serif);
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0 0 16px;
-    color: var(--ink);
-}
-
-.article-video-footer video {
+.article-video-top video {
     width: 100%;
     max-width: 760px;
     height: auto;
