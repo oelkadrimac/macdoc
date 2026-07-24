@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../../../styles.css">
-  <title>Charges</title>
+  <title>Managing Charges and Discounts</title>
 </head>
 <body>
 
@@ -44,16 +44,72 @@
         </a>
       </div>
 
-      <h1 class="detail-title">Charges</h1>
-      <p class="detail-subtitle">Create and manage charges for registrations and services.</p>
+      <h1 class="detail-title">Managing Charges and Discounts</h1>
+      <p class="detail-subtitle">This guide covers how administrators can configure system charges and discounts, and apply them directly to student records within MACSIS.</p>
 
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
       </div>
 
-      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for Charges coming soon.</p>
+      <div class="article-video-top" style="display: flex; justify-content: center; margin-bottom: 60px;">
+        <video style="max-width: 100%; border-radius: 8px;" controls>
+          <source src="Video/Charges-Discounts.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="article-content" style="line-height: 1.8;">
+        <p style="margin-bottom: 40px;">Before assigning any fee or discount to a student, the item must first exist in your system's master list.</p>
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Adding a New Charge Type</h3>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;">Navigate to the <strong>Administration</strong> side tab bar and click on <strong>Charge Type</strong>.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>+</strong> icon to open the "Add Charge Type" window.</li>
+            <li style="margin-bottom: 10px;">Fill in the <strong>Charge Name</strong> and <strong>Description</strong>.</li>
+            <li style="margin-bottom: 10px;">Toggle the selection to mark it as an <em>Ancillary Fee</em> or <em>Program Fee</em>.</li>
+            <li style="margin-bottom: 10px;">Input the <strong>Amount</strong>, select the <strong>Collection Method</strong> (e.g., Cheque, Cash, EFT), and choose the <strong>Project Code</strong>.</li>
+            <li style="margin-bottom: 10px;">Click <strong>Add</strong> to save the new charge type.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Adding a New Discount</h3>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;">From the same <strong>Administration > Charge Type</strong> menu, switch to the <strong>Discount</strong> tab.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>+</strong> icon to open the "Add Discount" window.</li>
+            <li style="margin-bottom: 10px;">Select the discount category from the dropdown menu.</li>
+            <li style="margin-bottom: 10px;">Fill in the <strong>Discount Name</strong> and <strong>Description</strong>.</li>
+            <li style="margin-bottom: 10px;">Toggle the switch to select either a flat <strong>Amount</strong> or a <strong>Percentage</strong>, and enter the specific value.</li>
+            <li style="margin-bottom: 10px;">Choose whether this discount applies on registration and click <strong>Add</strong>.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Verifying Active Discounts</h3>
+        <p style="margin-bottom: 60px;">Before billing, review the master list to ensure specific discounts (e.g., 5%, 10%, 25%, Sibling combinations, MAC Education Funds) are active. If a required percentage is missing, submit a ticket to IT Support to have that discount tier enabled.</p>
+
+        <p style="margin-bottom: 40px;">Once the discount or charge is active, assign it directly to the student. Navigate to <strong>Students Info > Students</strong>, and click the <strong>Payment</strong> icon on the student's application row.</p>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+            <img src="Students Tab.png" alt="Student Records tab" style="max-width: 100%; border-radius: 4px; border: 1px solid var(--gray-200);">
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <img src="Payment-Tab.png" alt="Students Payment section" style="max-width: 100%; border-radius: 4px; border: 1px solid var(--gray-200);">
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Managing the Charges Table</h3>
+        <p style="margin-bottom: 20px;">When managing a student's finances, the <strong>Select Action</strong> dropdown menu above the table is your primary tool for making adjustments.</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;"><strong>Cancel:</strong> Cancels the selected charge completely.</li>
+            <li style="margin-bottom: 10px;"><strong>Modify Collection Method:</strong> Changes how the fee will be collected (e.g., switching from EFT to Cheque).</li>
+            <li style="margin-bottom: 10px;"><strong>Modify Discount:</strong> Opens a window to apply or change a discount code.</li>
+            <li style="margin-bottom: 10px;"><strong>Remove Discount:</strong> Strips an existing discount from the selected charge, reverting it to the full amount.</li>
+            <li style="margin-bottom: 10px;"><strong>Send Email:</strong> Triggers an email communication to the parent regarding the specific charge.</li>
+        </ul>
+        
+        <p style="margin-bottom: 20px;">To execute updates using the table tools:</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;"><strong>Adding a Charge:</strong> Click the <strong>+</strong> icon on the far right. Select the student, choose the Charges Type, input the Amount and Due Date, add Remarks, and click <strong>Add</strong>.</li>
+            <li style="margin-bottom: 10px;"><strong>Applying a Discount:</strong> Check the box next to the charge row. Click the <strong>Select Action</strong> dropdown and choose <strong>Modify Discount</strong>. Select the discount and click <strong>Apply Discount</strong>.</li>
+        </ul>
       </div>
     </main>
   </div>
