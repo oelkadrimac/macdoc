@@ -44,16 +44,96 @@
         </a>
       </div>
 
-      <h1 class="detail-title">Billing</h1>
+      <h1 class="detail-title">Billing & Invoice</h1>
       <p class="detail-subtitle">Manage billing and invoicing for registrations.</p>
 
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
-      </div>
+</div>
 
-      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for Billing coming soon.</p>
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">1. Table Action Buttons and Quick Navigation</h3>
+        <p style="margin-bottom: 20px;">When navigating the administrative dashboards and data tables, you will primarily use the quick action buttons located on the table rows.</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;"><strong>The Edit Button:</strong> Click this button on a student's row to open their individual profile. You will use this to view uploaded banking documents, modify discounts, or update program information.</li>
+            <li style="margin-bottom: 10px;"><strong>The Submit Button:</strong> This button is used at the end of your workflow to send finalized invoices to Business Central (the accounting processor).</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">2. Verifying Parent Banking Information & Invoice Numbers</h3>
+        <p style="margin-bottom: 20px;">Before any billing can occur, you must ensure the banking data entered into the system matches the physical documents provided by the parents.</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;"><strong>Verification Steps:</strong> Click the Edit button to open a student's file and compare the typed system data to the uploaded void cheque or direct deposit form. You must verify the Transit Number (usually 5 digits), the Institution Number (usually 3 digits), and the Account Number. Replace any old data if new documents have been uploaded.</li>
+            <li style="margin-bottom: 10px;"><strong>"00" Numbers (Unverified):</strong> If a student's invoice number begins with "00", the account is unverified. The system will block you from submitting these invoices.</li>
+            <li style="margin-bottom: 10px;"><strong>"FT" Numbers (Verified):</strong> Once you successfully verify the banking information, the status indicator will turn green. The system will then automatically remove the "00" prefix and generate a permanent "FT" number, signaling the invoice is ready for processing.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">3. Submitting Monthly and One-Time Invoices</h3>
+        <p style="margin-bottom: 20px;">There are two distinct types of invoices you must submit depending on the fees being collected for that billing cycle.</p>
+        
+        <p style="margin-bottom: 10px;"><strong>Path A: Submitting Monthly Invoices (Program Fees)</strong><br>
+        These invoices are strictly for recurring, monthly tuition fees.</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Navigate to <strong>Finance > Submit Invoices > Monthly Invoices</strong>.</li>
+            <li style="margin-bottom: 10px;">Select the current billing month (e.g., August) from the dropdown.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>Submit Monthly Invoices</strong> button located at the top right.</li>
+        </ul>
+
+        <p style="margin-bottom: 10px;"><strong>Path B: Submitting One-Time Invoices (Ancillary & Resource Fees)</strong><br>
+        These invoices are for isolated charges like resource fees, beginning-of-the-year supply fees, or extracurricular activities.</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;">Navigate to <strong>Finance > Submit Invoices > One-Time Invoices</strong>.</li>
+            <li style="margin-bottom: 10px;">Select the relevant parameters for the one-time fees you are collecting.</li>
+            <li style="margin-bottom: 10px;">Click the submit button to push the invoices to accounting.</li>
+        </ul>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <video style="max-width: 100%; border-radius: 8px;" controls>
+                <source src="Video/Submitting-Invoices.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">4. The Post-Submission "Not Sent" Check (CRITICAL)</h3>
+        <p style="margin-bottom: 40px;">After submitting either type of invoice, navigate to the <strong>Not Sent</strong> tab to double-check that it is empty. If Accounting deletes a flawed invoice on their end, it will quietly revert to this tab.</p>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <video style="max-width: 100%; border-radius: 8px;" controls>
+                <source src="Video/bestPractices.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">5. Monitoring Invoice Statuses</h3>
+        <p style="margin-bottom: 20px;">Track invoice progress by the status colors displayed in the system:</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;"><strong>Gray (Awaiting Post):</strong> Submitted successfully, awaiting Accounting team processing.</li>
+            <li style="margin-bottom: 10px;"><strong>Green (Posted):</strong> Approved and posted by Accounting. You will see a green icon under the <strong>BC Status</strong> column. Clicking this green icon reveals the specific invoice number used to communicate with the Accounting team. <em>Note: Once posted, you cannot modify the collection method or pay the invoice directly.</em></li>
+            <li style="margin-bottom: 10px;"><strong>Red (Error):</strong> Failed to process; review the error message.</li>
+        </ul>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <video style="max-width: 100%; border-radius: 8px;" controls>
+                <source src="Video/Invoice-Statuses.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Managing Program Adjustments</h3>
+        <p style="margin-bottom: 20px;">If a student transfers between programs with different tuition rates (e.g., Regular to Al-Furqan):</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;"><strong>Transferring to a Higher-Fee Program:</strong> Do not alter the original base invoice. Add a secondary charge for the monetary difference (e.g., an extra $100) for every remaining month. Include a descriptive remark (e.g., "Extra fee for moving to Al-Furqan").</li>
+            <li style="margin-bottom: 10px;"><strong>Transferring to a Lower-Fee Program:</strong> Create a Credit Memo for the difference in the fee amount for every remaining month, and submit those memos to Accounting.</li>
+        </ul>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 60px;">
+            <video style="max-width: 100%; border-radius: 8px;" controls>
+                <source src="Video/programAdjustments.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
       </div>
     </main>
   </div>
