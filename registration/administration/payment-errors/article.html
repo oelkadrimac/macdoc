@@ -50,18 +50,69 @@
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+     </div>
+
+      <div class="article-video-top" style="display: flex; justify-content: center; margin-bottom: 60px;">
+        <video style="max-width: 100%; border-radius: 8px;" controls>
+          <source src="Video/Validation-Walkthrough.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
 
-      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for Payment Errors coming soon.</p>
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Quality Assurance – Invoice Validations</h3>
+        <p style="margin-bottom: 20px;">Review the Validations tab before submitting any invoices. The system will automatically block submissions if critical errors are present.</p>
+
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 60px; font-size: 14px;">
+          <thead>
+            <tr style="background-color: var(--gray-100); border-bottom: 2px solid var(--gray-300);">
+              <th style="text-align: left; padding: 12px; border: 1px solid var(--gray-200); color: var(--gray-900);">Validation Tab</th>
+              <th style="text-align: left; padding: 12px; border: 1px solid var(--gray-200); color: var(--gray-900);">Definition & Required Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Invalid Salesperson Code</strong></td>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>CRITICAL ERROR.</strong> A class is missing its code. Administrators cannot fix this. Immediately submit an IT Support ticket.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Withdrawn Student</strong></td>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags withdrawn/waitlisted students. <strong>Action:</strong> Ignore; no action required.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Unlinked Client / Donors</strong></td>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags missing constituent (CT) or FT numbers. <strong>Action:</strong> Ignore; Accounting handles this.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Unverified EFT</strong></td>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>SHOWSTOPPER.</strong> Invoices will fail to submit. <strong>Action:</strong> Open the attached void check/direct deposit form, confirm details match, check the verification box, and click Verify.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Duplicate EFT Details</strong></td>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags identical banking info (often siblings). <strong>Action:</strong> Verify they are siblings. Contact parents if unsure.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Duplicate Constituents/Customers</strong></td>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);">Two parents share a CT number or students share an FT number. <strong>Action:</strong> Escalate to Accounting before submitting invoices.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Invalid EFT Details</strong></td>
+              <td style="padding: 12px; border: 1px solid var(--gray-200);">Formatting errors (e.g., entering "000"). <strong>Action:</strong> Change Collection Method to "Cheque" to allow submission, then contact the parent for updated EFT info.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Managing Refunds and Non-Sufficient Funds (NSF)</h3>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 12px;"><strong>Credit Card (Stripe) Refunds:</strong> Administrators can manually process a refund in MACSIS if the transaction occurred within the last 30 days and falls within the current calendar year.</li>
+            <li style="margin-bottom: 12px;"><strong>EFT Refunds:</strong> Administrators cannot process EFT refunds directly. Click the <strong>Request Refund</strong> button on the student's finance profile, then send a separate email to the Accounting team including the principal's written approval for the refund.</li>
+            <li style="margin-bottom: 12px;"><strong>NSF (Bounced Checks):</strong> Do not manually refund or process a bounced check. Accounting receives an NSF report and updates MACSIS centrally. The invoice will automatically revert to an "Unpaid" status on your end, re-enabling the action buttons to collect a new payment.</li>
+        </ul>
+
       </div>
     </main>
   </div>
-
-  <footer class="site-footer">
-    <p>© 2026 Muslim Association of Canada.</p>
-  </footer>
-</div>
 
 <script>
   document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();

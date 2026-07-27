@@ -50,10 +50,88 @@
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
-      </div>
+    </div>
 
-      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for School Activities coming soon.</p>
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <p style="margin-bottom: 30px;">The <strong>School Activities</strong> module is a comprehensive administrative tool designed to create, track, and manage various educational programs, extracurriculars, or special events that require specific billing or enrollment tracking. To access this area, navigate to the left-hand menu, expand the <strong>Administration</strong> module, and select <strong>School Activities</strong>.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Navigating the Activities Dashboard</h3>
+        <p style="margin-bottom: 20px;">The main <strong>All School Activities</strong> dashboard displays a structured table containing all of your existing programs and events.</p>
+        
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Data Columns:</strong> The dashboard provides a clear overview of each activity's unique ID, Name, Description, associated fee Amount, and current Active status.</li>
+            <li style="margin-bottom: 10px;"><strong>Search and Filter Tools:</strong> Use the Search bar in the top right corner to quickly locate specific activities. You can also adjust the items displayed per page using the pagination controls at the bottom right to view more records at once.</li>
+            <li style="margin-bottom: 10px;"><strong>Quick Actions:</strong> Under the Actions column on the far right of the table, you can utilize quick-access icons to manage records:
+              <ul style="margin-top: 5px; list-style-type: circle;">
+                <li style="margin-bottom: 5px;"><strong>Edit:</strong> Click the grey pencil icon to modify an existing activity's details.</li>
+                <li style="margin-bottom: 5px;"><strong>Delete:</strong> Click the orange trash can icon to remove an activity from the system.</li>
+              </ul>
+            </li>
+        </ul>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="school-activities-dashboard.png" alt="All School Activities Dashboard" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 1: All School Activities dashboard displaying the activity table, search bar, and quick-action icons.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Adding a New School Activity</h3>
+        <p style="margin-bottom: 20px;">To create a new activity and integrate it into the registration and billing system, follow these steps:</p>
+        
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">From the <strong>All School Activities</strong> dashboard, click the blue <strong>+</strong> icon located in the top right corner of the screen.</li>
+            <li style="margin-bottom: 10px;">The <strong>Add School Activity</strong> side panel will open. Fill out the required parameters. Please note that fields marked with an asterisk (<strong>*</strong>) are mandatory.</li>
+        </ul>
+
+        <p style="margin-bottom: 15px;"><strong>Activity Fields and Parameters:</strong></p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Activity Name*:</strong> Enter the formal title of the event or program (e.g., <code>test_activity</code>).</li>
+            <li style="margin-bottom: 10px;"><strong>Description*:</strong> Provide necessary details regarding what the activity entails, target grade levels, or prerequisites.</li>
+            <li style="margin-bottom: 10px;"><strong>Amount*:</strong> Input the monetary fee required to participate in this activity.</li>
+            <li style="margin-bottom: 10px;"><strong>From date:</strong> Use the calendar icon to select the official start date of the activity.</li>
+            <li style="margin-bottom: 10px;"><strong>To date:</strong> Use the calendar icon to select the official end date of the activity.</li>
+            <li style="margin-bottom: 10px;"><strong>Status:</strong> Ensure the Active box is checked if you want this activity to be immediately available and visible in the system for registration.</li>
+        </ul>
+
+        <p style="margin-bottom: 40px;">Click the <strong>Add</strong> button at the bottom right of the panel to save the new activity, or click <strong>Cancel</strong> to discard the entry.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Accessing Activity Details and Participant Management</h3>
+        <p style="margin-bottom: 20px;">Once a school activity has been successfully created, administrators can navigate to a detailed view to manage and track which students are participating in that specific program.</p>
+        
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Accessing the View:</strong> You can open the <strong>Student Activity Details</strong> page by clicking directly on the activity's ID number from the main activities list.</li>
+            <li style="margin-bottom: 10px;"><strong>Summary Panel:</strong> The top of the details page features a summary panel displaying key metrics, including the activity's Name, Amount, Total Amount Collected, Status, Description, and Start Date.</li>
+        </ul>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="activity-student-management.png" alt="Student Activity Details and Add Students Window" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 2: Student Activity Details page displaying participant tracking tabs and the Add Students selection window.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Viewing and Tracking the Student List</h3>
+        <p style="margin-bottom: 20px;">Directly below the summary panel is the <strong>Student List</strong> section, which organizes participant data and streamlines tracking workflows.</p>
+        
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Status Tabs:</strong> The section includes dedicated tabs labeled <strong>Sent</strong>, <strong>Accepted</strong>, and <strong>Rejected</strong> to help administrators monitor student enrollment statuses at a glance.</li>
+            <li style="margin-bottom: 10px;"><strong>Comprehensive Data Columns:</strong> The participant table displays detailed information for each student, including their <strong>Student ID</strong>, <strong>Last Name</strong>, <strong>First Name</strong>, <strong>Gender</strong>, <strong>Age</strong>, <strong>Email</strong>, and <strong>Phone number</strong>.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Adding Students to an Activity</h3>
+        <p style="margin-bottom: 20px;">To assign and enroll students into an activity manually, follow these steps:</p>
+        
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Click the blue <strong>Add Students</strong> button located on the top right side of the Student List area.</li>
+            <li style="margin-bottom: 10px;">An <strong>Add Students</strong> window will pop up, displaying a complete directory of available students in the system.</li>
+            <li style="margin-bottom: 10px;"><strong>Filtering by Class:</strong> To narrow down the list, click the <strong>Class Filter</strong> dropdown menu at the top left to select specific class groups.</li>
+            <li style="margin-bottom: 10px;"><strong>Searching for Individuals:</strong> Alternatively, you can utilize the <strong>Search</strong> bar located on the top right to look up specific students by name or ID.</li>
+            <li style="margin-bottom: 10px;">Select the desired students by clicking the corresponding checkboxes located on the left side of each row next to their Student ID.</li>
+            <li style="margin-bottom: 10px;">Once all required students are selected, click the <strong>Add</strong> button in the top right corner of the window to confirm your selection and close the panel.</li>
+        </ul>
+
       </div>
     </main>
   </div>

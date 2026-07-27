@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../styles.css">
+  <title>FAQ</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../../../index.html" class="brand"><img src="../../../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../../../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../../../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="../../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../../article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Administration</a>
+        <a href="../../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="../article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Administration
+        </a>
+      </div>
+
+      <h1 class="detail-title">FAQ</h1>
+      <p class="detail-subtitle">Set up and manage discount codes and discount rules.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+     </div>
+
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">General System & Invoice Workflows</h3>
+        
+        <p style="margin-bottom: 20px;"><strong>Q: Can I change the collection method or apply a discount after an invoice is submitted and posted (green circle)?</strong><br>
+        A: No, once posted, you cannot modify, discount, or pay it manually. Action buttons only re-enable if the payment returns as NSF.</p>
+
+        <p style="margin-bottom: 20px;"><strong>Q: How can I track which invoices haven't been paid for a specific month?</strong><br>
+        A: Navigate to the Fee Tracker, select Review Invoices, and check the Unpaid Invoices list.</p>
+
+        <p style="margin-bottom: 20px;"><strong>Q: What should I do if my submitted invoices are stuck in "Awaiting Post" (Gray)?</strong><br>
+        A: If it is past the 5th of the month, follow up directly with Accounting using the specific Invoice Number (found by clicking the green icon under the BC Status column).</p>
+
+        <p style="margin-bottom: 20px;"><strong>Q: If an unpaid invoice from a previous month is still in the system, will it automatically be collected in the current month's EFT file?</strong><br>
+        A: No. You must contact IT or Accounting to have them change the date to the 1st of the next month so it can be collected in the upcoming batch.</p>
+
+        <p style="margin-bottom: 20px;"><strong>Q: What date should we set for a new invoice if the 1st of the current month has already passed?</strong><br>
+        A: You must set it for the 1st of the next month, as the system will not allow past-date submissions.</p>
+
+        <p style="margin-bottom: 40px;"><strong>Q: Should we use the bulk "Send Email" action in the Charges tab to remind parents to pay?</strong><br>
+        A: No, this feature is not intended for bulk monthly invoice reminders.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Discounts and Education Funds</h3>
+
+        <p style="margin-bottom: 20px;"><strong>Q: Who enables the MAC Education Fund (MEF) discount code initially?</strong><br>
+        A: IT and Accounting must enable the code in the master list before admins can assign it.</p>
+
+        <p style="margin-bottom: 20px;"><strong>Q: When the MEF is approved, do we add it ourselves on MACSIS, or does Accounting do it?</strong><br>
+        A: School admins must add the discount to the students themselves once approved by the board.</p>
+
+        <p style="margin-bottom: 20px;"><strong>Q: What should we do if we are waiting on MEF approval and the invoice deadline is approaching?</strong><br>
+        A: Do not base billing on last year's paperwork. Wait for the National School Board to send the official list of approved applicants.</p>
+
+        <p style="margin-bottom: 20px;"><strong>Q: Our school usually implements Education Funds later in the year (e.g., October). Is this allowed?</strong><br>
+        A: Timing variations must be discussed and verified directly with the National School Board representative.</p>
+
+        <p style="margin-bottom: 20px;"><strong>Q: How do we apply discounts for full-time staff children?</strong><br>
+        A: Go to Administration > Charge Types > Discounts and assign the "MAC employee discount" to the child. Look for combination codes (e.g., "Sibling 2 with employee 25") if they are also a sibling.</p>
+
+        <p style="margin-bottom: 40px;"><strong>Q: The sibling discount is currently showing as a flat $25, but the board approved a 5% discount. Can we change it?</strong><br>
+        A: School admins cannot manually change established amounts. Accounting must create the new parameters.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Class Sections</h3>
+
+        <p style="margin-bottom: 20px;"><strong>Q: If we have different sections of a grade (like 4A and 4B), do we need to specify that in MACSIS?</strong><br>
+        A: Separating into sections is strictly for internal organization, not accounting, unless there is a tuition fee difference.</p>
+
+        <p style="margin-bottom: 40px;"><strong>Q: Why does the system require a "Class Limit" for each section?</strong><br>
+        A: It controls registration numbers. If you group all students into one grade, manually increase the "Class Limit" to accommodate them, or new students will be waitlisted.</p>
+
+      </div>
+    </main>
+
+  </div>
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Global search functionality
+  const searchInput = document.getElementById('search-input');
+
+  searchInput.addEventListener('input', (e) => {
+    if (e.target.value.trim()) {
+      window.location.href = '../../../search.html?q=' + encodeURIComponent(e.target.value);
+    }
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const query = e.target.value.trim();
+      if (query) {
+        window.location.href = '../../../search.html?q=' + encodeURIComponent(query);
+      }
+    }
+  });
+</script>
+</body>
+</html>

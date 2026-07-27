@@ -50,14 +50,97 @@
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
-      </div>
+     </div>
 
-      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for Codes coming soon.</p>
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <p style="margin-bottom: 30px;">The <strong>Codes</strong> section is a critical administrative tool used to build and organize the foundational categories for your school's structural and academic data. To access this area, navigate to the left-hand menu, expand the <strong>Administration</strong> module, and select <strong>Codes</strong>. From here, you can navigate through various tabs to configure different data points.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">General Navigation: Creating New Entries</h3>
+        <p style="margin-bottom: 20px;">All tabs within the Codes section (Grades, Subjects, Sections, Periods, Rooms, Years, Levels, and Documents) function similarly and feature the option to create a new instance.</p>
+        <p style="margin-bottom: 10px;">To add a new entry to any category:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Navigate to the desired category tab.</li>
+            <li style="margin-bottom: 10px;">Click the blue <strong>+</strong> icon located in the top right corner of the screen.</li>
+            <li style="margin-bottom: 10px;">A right-hand side panel will open specific to that tab (e.g., clicking <strong>+</strong> on the Grades tab opens a "New Grade" panel).</li>
+            <li style="margin-bottom: 10px;">Fill in the required information. Ensure all mandatory fields (marked with a red asterisk <strong>*</strong>) are filled out. If a required field is left blank, the system will highlight it in red and display an error message (e.g., "Name is required").</li>
+            <li style="margin-bottom: 10px;">Click <strong>Save</strong> to add the entry to the system, or <strong>Cancel</strong> to discard the action.</li>
+        </ul>
+        <p style="margin-bottom: 40px;">Existing entries will populate in a table format within each tab. You can use the pencil icon to <strong>Edit</strong> or the trash can icon to <strong>Delete</strong> an existing code directly from the list.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Category Configurations</h3>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">1. Grades</h3>
+        <p style="margin-bottom: 10px;">Use this tab to define the specific grade levels available at your center.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Name*:</strong> Enter the standard name of the grade (e.g., bostonGrade01).</li>
+            <li style="margin-bottom: 10px;"><strong>Level*:</strong> Select the corresponding academic level from the dropdown menu.</li>
+            <li style="margin-bottom: 10px;"><strong>Salesperson Code*:</strong> Click the dropdown to search and select the specific financial/administrative tracking code associated with this grade (e.g., OGSS-G10-B).</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">2. Subjects</h3>
+        <p style="margin-bottom: 10px;">Use this tab to organize the academic subjects or courses offered.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Name*:</strong> Enter the general name of the subject.</li>
+            <li style="margin-bottom: 10px;"><strong>Code*:</strong> Assign a unique internal identification code for the subject.</li>
+            <li style="margin-bottom: 10px;"><strong>Title:</strong> Provide the formal title of the subject.</li>
+            <li style="margin-bottom: 10px;"><strong>Description:</strong> Add any relevant details about the curriculum or subject focus.</li>
+            <li style="margin-bottom: 10px;"><strong>Hours:</strong> Input the total number of credit or instructional hours associated with the subject.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">3. Sections</h3>
+        <p style="margin-bottom: 10px;">Use this tab to create subsets within grades or classes (such as organizing a large grade into Section A and Section B).</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Name*:</strong> Enter the distinct name or identifier for the section.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">4. Periods</h3>
+        <p style="margin-bottom: 10px;">Use this tab to define the daily bell schedule or instructional time blocks.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Name*:</strong> Enter the label for the period (e.g., bostonPeriod01).</li>
+            <li style="margin-bottom: 10px;"><strong>Description:</strong> Add a brief description if necessary.</li>
+            <li style="margin-bottom: 10px;"><strong>Start:</strong> Input the period's start time in HH:MM format and specify AM or PM.</li>
+            <li style="margin-bottom: 10px;"><strong>End:</strong> Input the period's end time in HH:MM format and specify AM or PM.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">5. Rooms</h3>
+        <p style="margin-bottom: 10px;">Use this tab to log the physical classrooms or facilities available in your center.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Number*:</strong> Enter the room number or identifying name (e.g., bostonRoom01).</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">6. Years</h3>
+        <p style="margin-bottom: 10px;">Use this tab to define the active academic years for enrollment and historical tracking.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Year*:</strong> Select the relevant year from the provided dropdown menu (e.g., 2024, 2025, 2026).</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">7. Levels</h3>
+        <p style="margin-bottom: 10px;">Use this tab to create structured administrative tiers. As noted in the system demo, Levels act as a precursor to formal grades. Depending on how your specific school functions, the levels defined here can later be toggled as a mandatory selection step for parents during the project and registration setup.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Name*:</strong> Enter the identifier for the level.</li>
+            <li style="margin-bottom: 10px;"><strong>Description:</strong> Add relevant details summarizing the level.</li>
+            <li style="margin-bottom: 10px;"><strong>Minimum Age*:</strong> Define the youngest age permitted for this level.</li>
+            <li style="margin-bottom: 10px;"><strong>Maximum Age*:</strong> Define the oldest age permitted for this level.</li>
+            <li style="margin-bottom: 10px;"><strong>Level Fee:</strong> Set the base dollar amount charged for enrollment in this level.</li>
+            <li style="margin-bottom: 10px;"><strong>Grade*:</strong> Link this level to its corresponding academic grade using the dropdown menu.</li>
+            <li style="margin-bottom: 10px;"><strong>Inactive Checkbox:</strong> Check this box to archive or disable the level without permanently deleting it.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">8. Documents</h3>
+        <p style="margin-bottom: 10px;">Use this tab to manage the mandatory or optional paperwork that students must provide during the registration process.</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;"><strong>Documents Name*:</strong> Enter the title of the required form or document.</li>
+            <li style="margin-bottom: 10px;"><strong>Document Template:</strong> Click the <strong>Browse to upload</strong> button to attach a downloadable template for parents/students to fill out.</li>
+            <li style="margin-bottom: 10px;"><strong>Documents Description:</strong> Provide instructions or details about what the document entails.</li>
+            <li style="margin-bottom: 10px;"><strong>New User:</strong> Toggle between <strong>Required</strong> and <strong>Not Required</strong> to dictate if first-time registrants must submit this file.</li>
+            <li style="margin-bottom: 10px;"><strong>Returning User:</strong> Toggle between <strong>Required</strong> and <strong>Not Required</strong> to dictate if existing students must re-submit this file.</li>
+            <li style="margin-bottom: 10px;"><strong>Inactive Checkbox:</strong> Check this box to disable the document requirement without deleting it from the system.</li>
+        </ul>
+
       </div>
     </main>
   </div>
-
   <footer class="site-footer">
     <p>© 2026 Muslim Association of Canada.</p>
   </footer>
