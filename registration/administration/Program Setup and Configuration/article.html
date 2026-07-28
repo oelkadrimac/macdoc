@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../styles.css">
+  <title>Program Setup and Configuration</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../../../index.html" class="brand"><img src="../../../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../../../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../../../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="../../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../../article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Administration</a>
+        <a href="../../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="../article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Administration
+        </a>
+      </div>
+
+      <h1 class="detail-title">Program Setup and Configuration</h1>
+      <p class="detail-subtitle">This guide walks administrators through the core setup of a school program, covering basic contact information, registration rules, integrated payment gateways, fee structures, and system branding.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+</div>
+
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Accessing Program Details</h3>
+        <p style="margin-bottom: 20px;">To manage the foundational settings of your school programs, navigate to the left-hand menu, expand <strong>Projects Setup</strong>, and select <strong>Schools</strong>. From there, open the specific program to view the <strong>Program Detail</strong> dashboard.</p>
+        <p style="margin-bottom: 30px;">The dashboard is divided into three main tabs: <strong>About</strong>, <strong>Registration</strong>, and <strong>Files</strong>. Click the blue <strong>Edit</strong> button in the top right corner of the page to make changes to any of these sections.</p>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="program-dashboard.png" alt="Program Detail Dashboard" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 1: Program Detail dashboard showing the primary configuration tabs and edit controls.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">1. The About Tab: Core Program Information</h3>
+        <p style="margin-bottom: 20px;">The About tab houses the general identifying information and external linkages for the program.</p>
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Program Details</h3>
+        <p style="margin-bottom: 20px;">This section defines the program's identity, including the Program Name (e.g., BostonFulltimeSchool), Program Type, District, and short or long descriptions. You can also view the program's "Active" status and whether it is flagged as a "Test School".</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Contact Details</h3>
+        <p style="margin-bottom: 20px;">Here you can manage the program's public-facing contact information. This includes the primary contact name, phone number, email, physical address, and links to social media (Facebook, Twitter), the website, and the Students and Parents Handbook.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">External Linkage</h3>
+        <p style="margin-bottom: 30px;">This section stores backend financial and administrative codes, such as the External bank account number, Cost center code, and E-transfer email.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">2. The Registration Tab: Enrollment, Fees, and Payment Configuration</h3>
+        <p style="margin-bottom: 20px;">The Registration tab serves as the central control panel for managing enrollment parameters, academic structures, fee schedules, and integrated payment gateways.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Registration Details</h3>
+        <p style="margin-bottom: 10px;">This section controls core enrollment parameters:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Age & Dates:</strong> Set the Lower and Upper age limits, Start and End dates, Start and End times, and Cutoff dates.</li>
+            <li style="margin-bottom: 10px;"><strong>Fees:</strong> Establish core costs, including the Application fee, Returning application fee, Program fee, and Waitlist fee.</li>
+            <li style="margin-bottom: 10px;"><strong>Toggles:</strong> Activate essential registration flows by checking boxes for Automatic WaitlistFee, Future Waitlist, New/Returning Filter, Allow Registration, and restricting to returning students only.</li>
+            <li style="margin-bottom: 10px;"><strong>Level Details:</strong> Manage academic structure by checking boxes to activate "Levels" and determining if they are mandatory or if multiple levels are allowed.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Payment & Financial Configuration</h3>
+        <p style="margin-bottom: 10px;">Manage how families submit online payments and contributions directly through the portal:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Donation Details:</strong> Toggle donations to active and set a default Donation Amount to prompt voluntary contributions during checkout.</li>
+            <li style="margin-bottom: 10px;"><strong>Stripe Details:</strong> Configure your payment gateway by inputting the required Stripe Publish Key and Stripe Secret Key.</li>
+            <li style="margin-bottom: 10px;"><strong>EFT Bank Withdrawal Details:</strong> Set up electronic fund transfers by toggling EFT Bank Withdrawal to active, defining the Withdrawal Frequency (e.g., Monthly), setting the number of Withdrawal Instalments, and specifying the Instalment Amount.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Carry Over</h3>
+        <p style="margin-bottom: 20px;">Manage code transmittals using the <strong>Carry over codes</strong> utility to transfer configurations or tracking codes smoothly across terms or academic sessions.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Other Controls</h3>
+        <p style="margin-bottom: 30px;">Use the <strong>Export Re-Enrolments</strong> button to download a comprehensive record of returning students for the upcoming term.</p>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="program-registration-tab.png" alt="Registration Tab Configuration" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 2: Registration tab interface showing enrollment rules, fees, and payment gateway fields.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">3. The Files Tab: Branding</h3>
+        <p style="margin-bottom: 20px;">The Files tab is used to manage the visual assets associated with your school program.</p>
+        <p style="margin-bottom: 40px;"><strong>Image Uploads:</strong> Administrators can view and manage the current Image path, Catalog Image path, and logo Image path. Uploading a logo ensures your specific school's branding appears correctly across the system.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Frequently Asked Questions (FAQ)</h3>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px;">
+              <strong>What if I need to temporarily pause new registrations?</strong><br>
+              Navigate to the Registration tab and uncheck the Allow Registration box under the Registration Details section. This acts as a master switch to stop incoming applications.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>What if our school updates its primary contact email or phone number?</strong><br>
+              Navigate to the About tab and update the fields under the Contact Details section, such as the Contact number or Contact email, to ensure parents have the correct information.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Where do I input our Stripe keys for online payments?</strong><br>
+              Stripe configuration is managed on the Registration tab. Scroll down to the Payment & Financial Configuration section to input your Stripe Publish Key and Stripe Secret Key.
+            </li>
+            <li style="margin-bottom: 10px;">
+              <strong>Can I set different application fees for new versus returning students?</strong><br>
+              Yes. On the Registration tab, you can set distinct amounts in the "Application fee" field and the "Returning application fee" field.
+            </li>
+        </ul>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Global search functionality
+  const searchInput = document.getElementById('search-input');
+
+  searchInput.addEventListener('input', (e) => {
+    if (e.target.value.trim()) {
+      window.location.href = '../../../search.html?q=' + encodeURIComponent(e.target.value);
+    }
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const query = e.target.value.trim();
+      if (query) {
+        window.location.href = '../../../search.html?q=' + encodeURIComponent(query);
+      }
+    }
+  });
+</script>
+</body>
+</html>
