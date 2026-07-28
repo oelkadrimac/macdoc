@@ -50,10 +50,112 @@
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
-      </div>
+     </div>
 
-      <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 40px; line-height: 1.8;">
-        <p style="margin: 0; color: var(--gray-800);">Content for Enrollment coming soon.</p>
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">1. PowerSchool Integration and Enrollment Sync</h3>
+        <p style="margin-bottom: 20px;">This module connects your MACSIS registration data directly to PowerSchool, ensuring enrollment statuses and contact details remain strictly aligned.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Phase 1: MACSIS Enrollment Prerequisites</h3>
+        <p style="margin-bottom: 10px;">Before syncing, ensure your foundational project settings are configured correctly to capture the right data. Navigate to the <strong>Projects Setup</strong> module on the left sidebar.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">Activate the <strong>Allow Registration</strong> toggle to permit new enrollments to be processed.</li>
+            <li style="margin-bottom: 10px;">Configure any necessary enrollment restrictions for specific student groups.</li>
+            <li style="margin-bottom: 10px;">Activate the <strong>Semesters</strong> and <strong>Levels</strong> toggles to capture mandatory academic structures.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Phase 2: Configuring PowerSchool Settings</h3>
+        <p style="margin-bottom: 10px;">Define the baseline rules for how MACSIS statuses translate into official PowerSchool records.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">Navigate to <strong>Integrations > Power School > Settings</strong>.</li>
+            <li style="margin-bottom: 10px;">Check the <strong>Active</strong> box to enable the PowerSchool sync functionality.</li>
+            <li style="margin-bottom: 10px;">Select the eligible MACSIS statuses by checking <strong>Enrolled</strong> and/or <strong>Registered</strong>.</li>
+            <li style="margin-bottom: 10px;">Define the default Enrollment Status, Entry date, Exit date, School Number, School Id, and applicable Programmes using the text fields and dropdowns.</li>
+            <li style="margin-bottom: 10px;">Click <strong>Save Changes</strong>.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Phase 3: Processing the Sync</h3>
+        <p style="margin-bottom: 10px;">Push MACSIS registrants into PowerSchool via the Sync dashboard located at <strong>Integrations > Power School > Sync</strong>. Select students by checking the boxes next to their names, then choose an action from the dropdown menu.</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>New Tab:</strong> Select freshly registered students and choose <strong>Sync</strong> to generate their initial PowerSchool profiles.</li>
+            <li style="margin-bottom: 10px;"><strong>Returning Tab:</strong> Select existing students and choose <strong>Re-Sync</strong> to update their historical profiles with new term data.</li>
+            <li style="margin-bottom: 10px;"><strong>Synced Tab:</strong> Manage officially enrolled students. Choose <strong>Sync new contacts</strong> to push newly added family information, or choose <strong>Re Sync</strong> to update a modified core profile.</li>
+        </ul>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="powerschool-sync-dashboard.png" alt="PowerSchool Sync Dashboard" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 1: PowerSchool Sync dashboard displaying the New, Returning, and Synced status tabs.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Managing Individual Contacts</h3>
+        <p style="margin-bottom: 10px;">From the Synced tab, you can manually manage specific parent or guardian data transfers.</p>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 10px;">Click the blue <strong>View Contacts</strong> button next to an enrolled student to open their Contact List panel.</li>
+            <li style="margin-bottom: 10px;">Click the blue <strong>Sync</strong> button next to a specific family member to push their data to PowerSchool.</li>
+            <li style="margin-bottom: 10px;">Verify completion by checking the action column; successfully transferred profiles will display an <strong>Already Synced</strong> status.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">2. Managing Individual Student Enrollments</h3>
+        <p style="margin-bottom: 20px;">Administrators can manually adjust specific class assignments directly from a student's profile outside of the mass system sync process.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Enrolling a Student</h3>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">Click a student's ID from any directory list to open their <strong>Student Profile</strong>.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>Enrollments</strong> tab located in the lower-left panel.</li>
+            <li style="margin-bottom: 10px;">Click the blue <strong>Manage Enrollments</strong> link.</li>
+            <li style="margin-bottom: 10px;">Open the <strong>Class</strong> dropdown menu on the Enroll Student page.</li>
+            <li style="margin-bottom: 10px;">Check the boxes for the desired classes and click the blue <strong>Enroll</strong> button.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Unenrolling a Student</h3>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">Navigate to the same Enroll Student page via the student's profile.</li>
+            <li style="margin-bottom: 10px;">Locate the active schedule table at the bottom of the page.</li>
+            <li style="margin-bottom: 10px;">Click the blue <strong>Unenroll</strong> button under the Actions column next to the relevant class.</li>
+        </ul>
+
+
+<div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="manage-enrollments-tab.png".png" alt="Student Profile Enrollments Panel" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 2: Student Profile Enrollments Panel.</em>
+          </div>
+        </div>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="student-enrollment-panel.png" alt="Student Profile Enrollments Panel" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 3: Student profile enrollments tab and class assignment management page.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Frequently Asked Questions (FAQ)</h3>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 15px;">
+              <strong>What if I try to enroll a student in a class that is already full?</strong><br>
+              The system will trigger a capacity warning pop-up stating, <em>"Class limit has already reached. Do yo want to enroll the student into this class?"</em>. You can override this limit by clicking the red OK button, or click Cancel to abort the enrollment.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>What if a student's profile is updated in MACSIS after they are already synced?</strong><br>
+              The student will automatically be flagged and appear under the <strong>Out of Sync</strong> tab on the PowerSchool Sync dashboard. You must select their profile and perform a fresh Re-Sync to ensure PowerSchool reflects the newest data.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>What if a sync fails to transfer properly?</strong><br>
+              The affected student will appear in the <strong>Sync Errors</strong> tab. Review the Sync Errors or Duplicate Errors columns to identify the specific data conflict, correct the issue in MACSIS, and attempt the sync action again.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Why aren't any new students appearing in the registration portal?</strong><br>
+              Ensure that the "Allow Registration" toggle is active under your primary Projects Setup settings. If this is deactivated, the enrollment form is locked and no new profiles can be generated.
+            </li>
+            <li style="margin-bottom: 10px;">
+              <strong>How can I tell if a parent's contact info is already in PowerSchool?</strong><br>
+              Navigate to the Synced tab on the PowerSchool Sync dashboard and click "View Contacts" next to the student's name. If the parent's data has successfully transferred, the action button will read "Already Synced" instead of offering a Sync option.
+            </li>
+        </ul>
+
       </div>
     </main>
   </div>
