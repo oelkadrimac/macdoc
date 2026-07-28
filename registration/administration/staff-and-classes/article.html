@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../styles.css">
+  <title>Staff and Classes</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../../../index.html" class="brand"><img src="../../../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../../../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;">
+          <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+          <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../../../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="../../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../../student-registration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Administration</a>
+        <a href="../../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="../article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Administration
+        </a>
+      </div>
+
+      <h1 class="detail-title">MACSIS Administration Guide: Staff and Classes</h1>
+      <p class="detail-subtitle">This guide provides administrators with comprehensive, step-by-step instructions for onboarding personnel, and managing classroom rosters.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      </div>
+
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">1. Managing Staff Profiles</h3>
+        <p style="margin-bottom: 20px;">The Staff module acts as the central directory for all teachers, administrators, and support personnel. Creating a staff profile is the first step before an employee can be assigned to teach a class or access the MACSIS portal.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">How to Add a New Staff Member</h3>
+        <p style="margin-bottom: 10px;">Follow these steps to set up a new staff member in the directory:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Navigate to the left-hand menu and click on <strong>Staff</strong> to open the system directory.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>+ (Plus)</strong> icon located at the top right of the screen to open the "Add New Staff" form.</li>
+            <li style="margin-bottom: 10px;">Fill out the <strong>About</strong> section with the employee's official Staff ID, legal First and Last Name, Date of Birth, Gender, and Phone number.</li>
+            <li style="margin-bottom: 10px;">Choose an onboarding option under the <strong>Mail</strong> section. Select <strong>"Invite Employee"</strong> to have the system automatically send them a welcome email, or select <strong>"Add Employee"</strong> to simply create their profile in the background using their Mac email. You must provide a valid email address for either option.</li>
+            <li style="margin-bottom: 10px;">Complete the <strong>Address</strong> fields, including Street, City, Province, Postal Code, and Country.</li>
+            <li style="margin-bottom: 10px;">Assign system permissions in the <strong>Role</strong> section. Select their access level using the Role dropdown (e.g., <code>SchoolAdmin</code>), set their Status to <strong>"Active,"</strong> and type in their specific Job Title.</li>
+            <li style="margin-bottom: 10px;">Click the blue <strong>Submit</strong> button at the bottom right to finalize and create the profile.</li>
+        </ul>
+
+        <!-- Image Placeholder 1 -->
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="add-new-staff.png" alt="Add New Staff Form" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 1: Add New Staff form illustrating About, Mail, Address, and Role configuration fields.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">Navigating the Staff Profile Tabs</h3>
+        <p style="margin-bottom: 10px;">Once a profile is created, clicking on an employee's name opens their full <strong>Staff Profile</strong>. This dashboard is divided into primary tabs located at the top of the screen:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Personal Tab:</strong> This is the default view. It houses core contact details organized by subtitles, including About, Address, Role, and Placements.</li>
+            <li style="margin-bottom: 10px;"><strong>Sub-Navigation:</strong> On the far left-hand side, beneath the employee's main contact card, a secondary menu tracks academic credentials like "Lectures Taken," "Degree," and "Designation" under About, and specific assigned topics under Subjects.</li>
+            <li style="margin-bottom: 10px;"><strong>Activity Tab:</strong> Click this tab to view a historical log of the staff member's system interactions and engagements.</li>
+            <li style="margin-bottom: 10px;"><strong>Documents Tab:</strong> Click this tab to access the employee's secure file repository.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">How to Assign a Teacher to a Class</h3>
+        <p style="margin-bottom: 10px;">Once a staff profile is created, you must link that employee to the specific classes they will be teaching:</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">From the main Staff directory, click on a specific employee's name to open their <strong>Staff Profile</strong>.</li>
+            <li style="margin-bottom: 10px;">Ensure you are on the main <strong>Personal</strong> tab on the right side of the screen.</li>
+            <li style="margin-bottom: 10px;">Scroll down past the About, Address, and Role sections to locate the <strong>Placements</strong> subtitle.</li>
+            <li style="margin-bottom: 10px;">Click the blue <strong>View Placements</strong> link under this subtitle.</li>
+            <li style="margin-bottom: 10px;">On the resulting "Place Staff" page, click the <strong>Class</strong> dropdown menu.</li>
+            <li style="margin-bottom: 10px;">Select the specific course (or multiple courses) you want to assign to this instructor.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>Assign</strong> button to lock in the schedule.</li>
+        </ul>
+
+        <!-- Image Placeholder 2 -->
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="staff-placements.png" alt="Staff Placements View" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 2: Staff profile placements section and course assignment interface.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">2. Building and Managing Classes</h3>
+        <p style="margin-bottom: 20px;">The Classes module is the scheduling engine of MACSIS. A class must be fully configured with a designated teacher, room, and capacity limit before any students can be enrolled.</p>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">How to Create a New Class</h3>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Navigate to the left-hand menu and select <strong>Classes</strong> to view your master schedule dashboard.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>+ (Plus)</strong> icon in the top right corner to open the "Add New Class" form.</li>
+            <li style="margin-bottom: 10px;">Use the dropdown menus to define core academic details: Grade, Subject, Section, and Period.</li>
+            <li style="margin-bottom: 10px;">Select the physical <strong>Room</strong> assignment and the current academic <strong>Year</strong>.</li>
+            <li style="margin-bottom: 10px;">Type a numerical value into the <strong>Limit</strong> field. This sets the maximum number of students allowed to enroll before the system flags a capacity warning.</li>
+            <li style="margin-bottom: 10px;">Click the blue <strong>Submit</strong> button to save and activate the class.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">How to Quickly Update a Class Capacity Limit</h3>
+        <p style="margin-bottom: 10px;">If you need to increase or decrease the size of a class, you can do this directly from the main dashboard without opening the full class profile:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Open the main <strong>Classes</strong> dashboard.</li>
+            <li style="margin-bottom: 10px;">Locate the specific class you need to adjust in the roster list.</li>
+            <li style="margin-bottom: 10px;">Look for the <strong>Limit</strong> column (where the current capacity is highlighted by a green, yellow, or red box).</li>
+            <li style="margin-bottom: 10px;">Click the small blue <strong>pencil icon</strong> directly next to the limit number.</li>
+            <li style="margin-bottom: 10px;">Type in the new capacity limit and hit enter to save the change instantly.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 15px; font-size: 18px;">How to Manage Students Enrolled in a Class</h3>
+        <p style="margin-bottom: 10px;">Administrators can easily drop students from a roster or apply material fees directly from a class profile:</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;">From the main Classes dashboard, click anywhere on a specific class row to open its full <strong>Class Detail</strong> page.</li>
+            <li style="margin-bottom: 10px;">Review class settings at the top of the page, and locate the <strong>Student List</strong> table below, which displays everyone currently enrolled in that section.</li>
+            <li style="margin-bottom: 10px;">To perform an administrative action, check the empty boxes on the far left side of the table next to the names of the targeted students.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>Select Action</strong> dropdown menu located just above the student list.</li>
+            <li style="margin-bottom: 10px;">Choose <strong>Unenroll</strong> to instantly remove selected students from the class roster, or choose <strong>Add Charges</strong> to generate a custom bill on their financial accounts.</li>
+        </ul>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="class-student-roster.png" alt="Class Student Roster Management" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 3: Class Detail page showing student roster selection and bulk action controls.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Frequently Asked Questions (FAQ)</h3>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px;">
+              <strong>What is the difference between "Invite Employee" and "Add Employee" when creating a staff profile?</strong><br>
+              Selecting "Invite Employee" automatically sends a welcome email to the user so they can set up their portal access, whereas "Add Employee" creates their profile in the background using their Mac email without sending an automated invitation immediately.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>How do I adjust a class capacity quickly without opening its profile?</strong><br>
+              Navigate to the main Classes dashboard, find the class row, and click the blue pencil icon next to the value in the Limit column to update it inline.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Can I assign an instructor to multiple classes at once?</strong><br>
+              Yes. When placing staff via the "Place Staff" page, you can select multiple courses from the Class dropdown before clicking Assign.
+            </li>
+            <li style="margin-bottom: 10px;">
+              <strong>How do I bill students enrolled in a specific class for course materials?</strong><br>
+              Open the Class Detail page, check the boxes next to the targeted students in the Student List table, select <strong>Add Charges</strong> from the Select Action dropdown, and apply the custom bill.
+            </li>
+        </ul>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Global search functionality
+  const searchInput = document.getElementById('search-input');
+
+  searchInput.addEventListener('input', (e) => {
+    if (e.target.value.trim()) {
+      window.location.href = '../../../search.html?q=' + encodeURIComponent(e.target.value);
+    }
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const query = e.target.value.trim();
+      if (query) {
+        window.location.href = '../../../search.html?q=' + encodeURIComponent(query);
+      }
+    }
+  });
+</script>
+</body>
+</html>
