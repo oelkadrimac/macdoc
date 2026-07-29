@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../../styles.css">
+  <title>Invoice Validation and Quality Assurance</title>
+</head>
+<body>
+
+<div class="page">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="header-left">
+        <a href="../../../index.html" class="brand"><img src="../../../mac-logo.png" alt="MAC Logo" /></a>
+        <div class="nav-divider"></div>
+        <a href="../../../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="position: relative;" class="search-box">
+          <input type="text" id="search-input" placeholder="Search...">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../../../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="../../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../../student-registration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Administration</a>
+        <a href="../../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="../article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Administration
+        </a>
+      </div>
+
+      <h1 class="detail-title">Invoice Validation and Quality Assurance</h1>
+      <p class="detail-subtitle">Review quality assurance validation tabs, handle pre-submission errors, and manage refunds and NSF protocols.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      </div>
+
+      <div class="article-video-top" style="display: flex; justify-content: center; margin-bottom: 60px;">
+        <video style="max-width: 100%; border-radius: 8px;" controls>
+          <source src="Video/Validation-Walkthrough.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="article-content" style="line-height: 1.8;">
+        
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Quality Assurance – Invoice Validations</h3>
+        <p style="margin-bottom: 20px;">Review the Validations tab before submitting any invoices. The system will automatically block submissions if critical errors are present.</p>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 60px; font-size: 14px;">
+            <thead>
+              <tr style="background-color: var(--gray-100); border-bottom: 2px solid var(--gray-300);">
+                <th style="text-align: left; padding: 12px; border: 1px solid var(--gray-200); color: var(--gray-900);">Validation Tab</th>
+                <th style="text-align: left; padding: 12px; border: 1px solid var(--gray-200); color: var(--gray-900);">Definition & Required Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Invalid Salesperson Code</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>CRITICAL ERROR.</strong> A class is missing its code. Administrators cannot fix this. Immediately submit an IT Support ticket.</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Withdrawn Student</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags withdrawn/waitlisted students. <strong>Action:</strong> Ignore; no action required.</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Unlinked Client / Donors</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags missing constituent (CT) or FT numbers. <strong>Action:</strong> Ignore; Accounting handles this.</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Unverified EFT</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>SHOWSTOPPER.</strong> Invoices will fail to submit. <strong>Action:</strong> Open the attached void check/direct deposit form, confirm details match, check the verification box, and click Verify.</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Duplicate EFT Details</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags identical banking info (often siblings). <strong>Action:</strong> Verify they are siblings. Contact parents if unsure.</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Duplicate Constituents/Customers</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);">Two parents share a CT number or students share an FT number. <strong>Action:</strong> Escalate to Accounting before submitting invoices.</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Invalid EFT Details</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--gray-200);">Formatting errors (e.g., entering "000"). <strong>Action:</strong> Change Collection Method to "Cheque" to allow submission, then contact the parent for updated EFT info.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Managing Refunds and Non-Sufficient Funds (NSF)</h3>
+        <ul style="margin-bottom: 40px;">
+            <li style="margin-bottom: 12px;"><strong>Credit Card (Stripe) Refunds:</strong> Administrators can manually process a refund in MACSIS if the transaction occurred within the last 30 days and falls within the current calendar year.</li>
+            <li style="margin-bottom: 12px;"><strong>EFT Refunds:</strong> Administrators cannot process EFT refunds directly. Click the <strong>Request Refund</strong> button on the student's finance profile, then send a separate email to the Accounting team including the principal's written approval for the refund.</li>
+            <li style="margin-bottom: 12px;"><strong>NSF (Bounced Checks):</strong> Do not manually refund or process a bounced check. Accounting receives an NSF report and updates MACSIS centrally. The invoice will automatically revert to an "Unpaid" status on your end, re-enabling the action buttons to collect a new payment.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Frequently Asked Questions (FAQ)</h3>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px;">
+              <strong>What should I do if I encounter an "Invalid Salesperson Code" error?</strong><br>
+              This is a critical system error that administrators cannot fix manually. You must submit an IT support ticket immediately.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>How do I bypass an "Unverified EFT" block to submit invoices?</strong><br>
+              Open the attached void check or direct deposit form, confirm the details match the family's records, check the verification box, and click Verify.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Can I process an EFT refund directly in MACSIS?</strong><br>
+              No. You must click the Request Refund button on the student's finance profile and email the Accounting team with the principal's written approval.
+            </li>
+            <li style="margin-bottom: 10px;">
+              <strong>How are bounced checks (NSF) handled in the system?</strong><br>
+              Do not process them manually. Accounting handles NSF reports centrally, which automatically reverts the invoice to an "Unpaid" status so you can collect a new payment.
+            </li>
+        </ul>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Global search functionality
+  const searchInput = document.getElementById('search-input');
+
+  searchInput.addEventListener('input', (e) => {
+    if (e.target.value.trim()) {
+      window.location.href = '../../../search.html?q=' + encodeURIComponent(e.target.value);
+    }
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const query = e.target.value.trim();
+      if (query) {
+        window.location.href = '../../../search.html?q=' + encodeURIComponent(query);
+      }
+    }
+  });
+</script>
+</body>
+</html>

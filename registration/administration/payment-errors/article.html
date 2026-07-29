@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../../../styles.css">
-  <title>Payment Errors</title>
+  <title>Managing Payment Errors</title>
 </head>
 <body>
 
@@ -31,7 +31,7 @@
       <div class="sidebar-section">
         <div class="sidebar-section-label">MACSIS</div>
         <a href="../../../donations/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
-        <a href="../../article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../../student-registration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
         <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Administration</a>
         <a href="../../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
       </div>
@@ -44,75 +44,140 @@
         </a>
       </div>
 
-      <h1 class="detail-title">Payment Errors</h1>
-      <p class="detail-subtitle">Troubleshoot and resolve payment-related errors.</p>
+      <h1 class="detail-title">MACSIS Administration Guide: Managing Payment Errors and Resolving Failed Transactions</h1>
+      <p class="detail-subtitle">This comprehensive guide explains how administrators can navigate the Payment Errors dashboard, investigate why transactions fail, resolve billing issues on family accounts, manage Business Central synchronization blocks, and clear items from the administrative workflow queue.</p>
 
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
-     </div>
-
-      <div class="article-video-top" style="display: flex; justify-content: center; margin-bottom: 60px;">
-        <video style="max-width: 100%; border-radius: 8px;" controls>
-          <source src="Video/Validation-Walkthrough.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
       </div>
 
       <div class="article-content" style="line-height: 1.8;">
         
-        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Quality Assurance – Invoice Validations</h3>
-        <p style="margin-bottom: 20px;">Review the Validations tab before submitting any invoices. The system will automatically block submissions if critical errors are present.</p>
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">1. Understanding How Payment Errors Occur</h3>
+        <p style="margin-bottom: 20px;">When parents or guardians submit payments online through the MACSIS portal, the system processes transactions securely via Stripe. However, transactions can occasionally fail due to expired credit cards, insufficient funds, or communication timeouts with the payment gateway.</p>
+        <p style="margin-bottom: 20px;">Furthermore, once a payment or invoice is generated in MACSIS, it automatically syncs with <strong>Business Central (BC)</strong>—the organization's dedicated accounting processor—for official ledger posting and financial approval. If this synchronization fails, a system error is flagged, requiring administrative intervention.</p>
 
-        <table style="width: 100%; border-collapse: collapse; margin-bottom: 60px; font-size: 14px;">
-          <thead>
-            <tr style="background-color: var(--gray-100); border-bottom: 2px solid var(--gray-300);">
-              <th style="text-align: left; padding: 12px; border: 1px solid var(--gray-200); color: var(--gray-900);">Validation Tab</th>
-              <th style="text-align: left; padding: 12px; border: 1px solid var(--gray-200); color: var(--gray-900);">Definition & Required Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Invalid Salesperson Code</strong></td>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>CRITICAL ERROR.</strong> A class is missing its code. Administrators cannot fix this. Immediately submit an IT Support ticket.</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Withdrawn Student</strong></td>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags withdrawn/waitlisted students. <strong>Action:</strong> Ignore; no action required.</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Unlinked Client / Donors</strong></td>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags missing constituent (CT) or FT numbers. <strong>Action:</strong> Ignore; Accounting handles this.</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Unverified EFT</strong></td>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>SHOWSTOPPER.</strong> Invoices will fail to submit. <strong>Action:</strong> Open the attached void check/direct deposit form, confirm details match, check the verification box, and click Verify.</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Duplicate EFT Details</strong></td>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);">Flags identical banking info (often siblings). <strong>Action:</strong> Verify they are siblings. Contact parents if unsure.</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Duplicate Constituents/Customers</strong></td>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);">Two parents share a CT number or students share an FT number. <strong>Action:</strong> Escalate to Accounting before submitting invoices.</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);"><strong>Invalid EFT Details</strong></td>
-              <td style="padding: 12px; border: 1px solid var(--gray-200);">Formatting errors (e.g., entering "000"). <strong>Action:</strong> Change Collection Method to "Cheque" to allow submission, then contact the parent for updated EFT info.</td>
-            </tr>
-          </tbody>
-        </table>
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">2. Navigating to the Payment Errors Dashboard and Filtering Queues</h3>
+        <p style="margin-bottom: 20px;">The Payment Errors dashboard is your primary command center for tracking down unresolved financial issues:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Locate and expand the <strong>Finance</strong> module on the left-hand navigation sidebar.</li>
+            <li style="margin-bottom: 10px;">Click on <strong>Payment Errors</strong> to launch the main error management interface.</li>
+            <li style="margin-bottom: 10px;">Look at the top left corner of the dashboard and locate the <strong>"Select Type"</strong> dropdown menu.</li>
+            <li style="margin-bottom: 10px;">Filter your view based on the type of transaction failure: <strong>Invoice Payment Error</strong> (for tuition, program costs, or ancillary school charges) or <strong>Donation Payment Error</strong> (for voluntary family contributions or campaign donations).</li>
+        </ul>
 
-        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Managing Refunds and Non-Sufficient Funds (NSF)</h3>
-        <ul style="margin-bottom: 40px;">
-            <li style="margin-bottom: 12px;"><strong>Credit Card (Stripe) Refunds:</strong> Administrators can manually process a refund in MACSIS if the transaction occurred within the last 30 days and falls within the current calendar year.</li>
-            <li style="margin-bottom: 12px;"><strong>EFT Refunds:</strong> Administrators cannot process EFT refunds directly. Click the <strong>Request Refund</strong> button on the student's finance profile, then send a separate email to the Accounting team including the principal's written approval for the refund.</li>
-            <li style="margin-bottom: 12px;"><strong>NSF (Bounced Checks):</strong> Do not manually refund or process a bounced check. Accounting receives an NSF report and updates MACSIS centrally. The invoice will automatically revert to an "Unpaid" status on your end, re-enabling the action buttons to collect a new payment.</li>
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="payment-errors-dashboard.png" alt="Payment Errors Dashboard" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 1: Payment Errors dashboard showing error queue filters and type selection.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">3. Investigating Error Messages and Technical Logs</h3>
+        <p style="margin-bottom: 20px;">Before applying a fix to a family's account, you must examine the specific root cause of the error:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Ensure you are viewing the <strong>Outstanding</strong> tab at the top of the dashboard to see active, unhandled errors.</li>
+            <li style="margin-bottom: 10px;">Locate the specific error row and click the small blue <strong>"i"</strong> icon found in the <strong>Error Message</strong> column.</li>
+            <li style="margin-bottom: 10px;">Review the <strong>Payment Error Details</strong> popup window that appears, which displays critical metadata including the Invoice ID, Payment ID, student name, parent contacts, charge type name, and total amount.</li>
+            <li style="margin-bottom: 10px;">Click the <strong>"Click here for more technical details"</strong> link at the bottom of the popup to expand the <strong>Stripe Error Json</strong> and <strong>Stripe Response Json</strong> logs for IT escalation.</li>
+            <li style="margin-bottom: 10px;">Click the red <strong>OK</strong> button to close the details window.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">4. Recognizing Business Central (BC) Integration Status Icons</h3>
+        <p style="margin-bottom: 20px;">Clicking directly on the blue <strong>Invoice ID</strong> number within the error queue redirects you instantly to the corresponding <strong>Family Detail</strong> page. Navigate to the <strong>Charges</strong> tab to inspect billing history and look for Business Central integration status icons:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">🔴 <strong>Red BC Icon:</strong> Indicates a synchronization failure. The charge exists in MACSIS, but it failed to push through to Business Central, blocking accounting ledger posting.</li>
+            <li style="margin-bottom: 10px;">🟢 <strong>Green BC Icon:</strong> Indicates a successful integration. The invoice has synchronized cleanly with Business Central.</li>
+        </ul>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="payment-error-details.png" alt="Payment Error Details Popup" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 2: Payment Error Details window displaying technical JSON logs and metadata.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">5. Resolving Failed Charges on the Family Detail Page</h3>
+        <p style="margin-bottom: 20px;">Once you have identified a failed charge with a red BC sync error, locate the target charge row on the Family Detail page and click the <strong>three-dot icon (...)</strong> in the far-right <strong>Actions</strong> column to open the adjustment menu:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 8px;"><strong>Pay:</strong> Process an immediate manual payment using alternative funds to clear the outstanding balance.</li>
+            <li style="margin-bottom: 8px;"><strong>Add Credit Memo:</strong> Apply an existing pre-paid account credit to offset and clear the charge.</li>
+            <li style="margin-bottom: 8px;"><strong>Add Discount:</strong> Open a prompt to apply an approved financial reduction to the invoice.</li>
+            <li style="margin-bottom: 8px;"><strong>Convert to June Invoice:</strong> Push the billing cycle forward for that specific invoice.</li>
+            <li style="margin-bottom: 8px;"><strong>Add Comments:</strong> Type an internal note documenting why the transaction failed or steps taken to fix it.</li>
+            <li style="margin-bottom: 8px;"><strong>Add Collection Method:</strong> Assign or modify the payment instrument attached to the invoice.</li>
+            <li style="margin-bottom: 8px;"><strong>Send Email:</strong> Open an automated communication window to message parents directly regarding the billing block.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">6. Updating Outdated or Declined Collection Methods</h3>
+        <p style="margin-bottom: 20px;">If a payment failed because a parent's credit card expired or their account was declined:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Locate the collection method indicator badge (such as <em>Cheque</em>, <em>Cash</em>, or <em>Credit Card</em>) displayed next to the Actions menu on the charge row.</li>
+            <li style="margin-bottom: 10px;">Click directly on the badge to open the <strong>Update Collection Method</strong> popup window.</li>
+            <li style="margin-bottom: 10px;">Open the dropdown menu and select the correct payment method (e.g., Cash, Cheque, Debit/Credit Card, Education Fund).</li>
+            <li style="margin-bottom: 10px;">Save your selection to update the file and re-attempt processing.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">7. Acknowledging and Clearing Resolved Errors from the Queue</h3>
+        <p style="margin-bottom: 20px;">After resolving a charge or communicating a fix to parents, you must clear the item from your active queue:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;">Return to the main <strong>Payment Errors</strong> dashboard and verify you are on the <strong>Outstanding</strong> tab.</li>
+            <li style="margin-bottom: 10px;">Find the error you just fixed and click the <strong>green arrow</strong> located in the <strong>Actions</strong> column.</li>
+            <li style="margin-bottom: 10px;">An <strong>"Add Message"</strong> popup box will appear. You <strong>must</strong> type a brief explanation into the <strong>Comment\*</strong> field (e.g., "Contacted parent; updated credit card information").</li>
+            <li style="margin-bottom: 10px;">Click the blue <strong>OK</strong> button to archive the item under the <strong>Acknowledged</strong> tab.</li>
+        </ul>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="family-detail-charges.png" alt="Family Detail Charges Tab" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 3: Family Detail page showing charge actions, BC integration icons, and collection method badges.</em>
+          </div>
+        </div>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">8. Managing Error Workflows and Reverting Items</h3>
+        <p style="margin-bottom: 20px;">As your administrative team processes daily errors, track progress across dashboard tabs:</p>
+        <ul style="margin-bottom: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Acknowledged Tab:</strong> Houses errors that have been reviewed, investigated, or fixed. If an error was accidentally acknowledged, click the <strong>yellow arrow</strong> in the Actions column, provide a mandatory comment, and the item will move back to Outstanding.</li>
+            <li style="margin-bottom: 10px;"><strong>All Tab:</strong> Provides a comprehensive historical log of every payment error across all statuses, featuring a yellow <strong>"Outstanding"</strong> badge for active items.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">9. Best Practices for Escalating Issues to the Accounting Team</h3>
+        <p style="margin-bottom: 20px;">If a transaction error is tied to a complex system bug, escalate it to your internal finance department with the following information:</p>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>The Unique Invoice Number:</strong> Navigate to the Family Detail page, locate the charge, and if the BC icon is green, click the icon to copy the exact invoice number.</li>
+            <li style="margin-bottom: 10px;"><strong>Student & Family Name:</strong> Ensure the student's full name is clearly stated.</li>
+            <li style="margin-bottom: 10px;"><strong>Technical JSON Logs:</strong> Copy the Stripe error logs from the blue "i" icon on the main Payment Errors dashboard.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Frequently Asked Questions (FAQ)</h3>
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 15px;">
+              <strong>What does a Red BC icon mean next to a student's charge?</strong><br>
+              A red BC icon indicates an integration error, meaning the charge failed to synchronize properly with Business Central for accounting ledger posting.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>How do I clear an error from my main Outstanding queue?</strong><br>
+              Once you have resolved the charge or contacted the family, click the green arrow in the Actions column on the Payment Errors dashboard, enter a mandatory explanation note, and click OK.
+            </li>
+            <li style="margin-bottom: 15px;">
+              <strong>Can I revert an error from the Acknowledged list back to Outstanding?</strong><br>
+              Yes. Go to the Acknowledged tab, click the yellow arrow in the Actions column, provide a comment in the popup window, and it will return to the outstanding queue.
+            </li>
+            <li style="margin-bottom: 10px;">
+              <strong>Where can I find technical data to escalate a persistent payment bug?</strong><br>
+              Click the blue "i" icon in the Error Message column on the Payment Errors dashboard, then click the link for technical details to view the Stripe Error Json and Stripe Response Json.
+            </li>
         </ul>
 
       </div>
     </main>
   </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
 
 <script>
   document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
