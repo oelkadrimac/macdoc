@@ -50,9 +50,22 @@
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
-    </div>
+   </div>
 
       <div class="article-content" style="line-height: 1.8;">
+
+        <!-- Video Section at the Top -->
+        <div style="margin-bottom: 40px; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <video controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block;">
+              <source src="School_Activity_Phase1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Video Walkthrough: School Activities Module & Parent Portal Workflow (Phase 1).</em>
+          </div>
+        </div>
         
         <p style="margin-bottom: 30px;">The <strong>School Activities</strong> module is a comprehensive administrative tool designed to create, track, and manage various educational programs, extracurriculars, or special events that require specific billing or enrollment tracking. To access this area, navigate to the left-hand menu, expand the <strong>Administration</strong> module, and select <strong>School Activities</strong>.</p>
 
@@ -123,13 +136,28 @@
         <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">Adding Students to an Activity</h3>
         <p style="margin-bottom: 20px;">To assign and enroll students into an activity manually, follow these steps:</p>
         
-        <ul style="margin-bottom: 20px;">
+        <ul style="margin-bottom: 30px;">
             <li style="margin-bottom: 10px;">Click the blue <strong>Add Students</strong> button located on the top right side of the Student List area.</li>
             <li style="margin-bottom: 10px;">An <strong>Add Students</strong> window will pop up, displaying a complete directory of available students in the system.</li>
             <li style="margin-bottom: 10px;"><strong>Filtering by Class:</strong> To narrow down the list, click the <strong>Class Filter</strong> dropdown menu at the top left to select specific class groups.</li>
             <li style="margin-bottom: 10px;"><strong>Searching for Individuals:</strong> Alternatively, you can utilize the <strong>Search</strong> bar located on the top right to look up specific students by name or ID.</li>
             <li style="margin-bottom: 10px;">Select the desired students by clicking the corresponding checkboxes located on the left side of each row next to their Student ID.</li>
             <li style="margin-bottom: 10px;">Once all required students are selected, click the <strong>Add</strong> button in the top right corner of the window to confirm your selection and close the panel.</li>
+        </ul>
+
+        <h3 style="color: #1c8868; font-weight: bold; margin-bottom: 20px;">The Parent Experience & Portal Workflow</h3>
+        <p style="margin-bottom: 20px;">Once students are invited by administrators, parents complete the process through email notifications and the MAC Portal:</p>
+        
+        <ul style="margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Email Notifications:</strong> Parents receive an automated email notification stating that a new activity has been created for their child, outlining the event details, fee amount, and a direct link to view details.</li>
+            <li style="margin-bottom: 10px;"><strong>MAC Portal Access:</strong> Clicking the link directs parents to log into the MAC Portal straight to the activity invite details page.</li>
+            <li style="margin-bottom: 10px;"><strong>Parent Action Options:</strong> From the portal, parents can choose from three primary actions:
+              <ul style="margin-top: 5px; list-style-type: circle;">
+                <li style="margin-bottom: 5px;"><strong>Pay:</strong> Parents can complete the secure payment process by entering their card details. Once paid, the activity status updates to accepted.</li>
+                <li style="margin-bottom: 5px;"><strong>Reject:</strong> Declining the activity moves the entry directly to the parent's <em>Rejected</em> tab.</li>
+                <li style="margin-bottom: 5px;"><strong>Cancel:</strong> Returns the parent back to the list of activities without making changes.</li>
+              </ul>
+            </li>
         </ul>
 
       </div>
