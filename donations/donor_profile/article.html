@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <title>Kiosks</title>
+</head>
+<body>
+
+<div class="page">
+<header class="topbar">
+  <div class="topbar-inner" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <div class="header-left" style="display: flex; align-items: center;">
+      <a href="../../index.html" class="brand"><img src="../../mac-logo.png" alt="MAC Logo" /></a>
+      <div class="nav-divider"></div>
+      <a href="../../index.html" class="topnav-link"><i class="fa-solid fa-book-open"></i> All Guides</a>
+    </div>
+    <div class="header-right" style="display: flex; align-items: center; gap: 12px;">
+      <a href="https://outlook.office.com/book/SISSupportMA@macnet.ca/?ismsaljsauthenabled" target="_blank" style="background-color: #347e57; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 6px; font-weight: 500;">
+        <i class="fa-regular fa-calendar-days"></i> Book Support
+      </a>
+      <div style="position: relative;">
+        <input type="text" id="search-input" placeholder="Search..." style="padding: 8px 12px; border: 1px solid var(--gray-300); border-radius: 4px; width: 250px; font-size: 14px;">
+        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none;"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <a href="../../index.html" class="sidebar-link"><i class="fa-solid fa-house"></i> Browse All Guides</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-label">MACSIS</div>
+        <a href="../article.html" class="sidebar-link is-active"><i class="fa-solid fa-file-lines"></i> Donations & Campaigns</a>
+        <a href="../../registration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Student Registration</a>
+        <a href="../../registration/administration/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> Administration</a>
+        <a href="../../powerschool/article.html" class="sidebar-link"><i class="fa-solid fa-file-lines"></i> PowerSchool</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+        <a href="../article.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 5px;">
+          <i class="fa-solid fa-chevron-left"></i> Back to Donations & Campaigns
+        </a>
+      </div>
+
+      <h1 class="detail-title">Donor Profiles</h1>
+      <p class="detail-subtitle">Manage and view information about individual donors.</p>
+
+      <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
+        <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
+        <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
+      
+      </div>
+
+      <div style="margin-bottom: 40px; line-height: 1.8; color: #333333;">
+        
+        <p>As an administrator, knowing how the donor profile works is key to supporting our community and keeping financial records accurate. A donor profile is a secure, central account that acts as a user's master file within the MAC ecosystem. It stores a user's personal information, tracks their comprehensive giving history, and manages their family's school and program registrations. Encouraging users to utilize this profile empowers them to self-serve, drastically reducing administrative support tickets, ensuring annual tax receipts are generated flawlessly, and keeping program enrollments centralized.</p>
+
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="donorDonations.png" alt="Registration Tab Configuration" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 1: A broad screenshot of the Donor Profile dashboard.</em>
+          </div>
+        </div>
+
+        
+
+        <h2 style="color: #347e57; font-size: 1.2rem; margin-top: 40px; margin-bottom: 15px;">How is a Donor Profile Created?</h2>
+        <p>When a donor calls or emails asking how to set up or access their account, it is highly beneficial to understand the exact workflow they experience on their end. The system is designed to prompt them automatically:</p>
+        
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>The Checkout Process:</strong> The process begins on the <strong>Online Donation portal</strong>. When donors browse campaigns and enter their credit card information to submit a payment, the system captures their basic contact info.</li>
+            <li style="margin-bottom: 10px;"><strong>The Automated Trigger:</strong> Right after a successful payment on the portal, the MAC database automatically generates and sends a <strong>Donation Confirmation</strong> email to the donor's provided address.</li>
+            <li style="margin-bottom: 10px;"><strong>The Setup Prompt:</strong> This confirmation email serves two purposes: it provides a transaction receipt (detailing the amount, transaction ID, designated program, and recurring schedule if applicable) and contains a clear call-to-action instructing the donor to finalize their profile setup to manage this and future payments.</li>
+            <li style="margin-bottom: 10px;"><strong>Admin Tip:</strong> If a donor is confused or lost, tell them to open their confirmation email and click the large green <strong>Login</strong> button. This takes them straight to the MAC Portal to create their password and finish setting up their profile, which automatically links their brand new donation to their account.</li>
+        </ul>
+
+
+         <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="DonationConfirm.png" alt="Registration Tab Configuration" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 2: Donation Confirmation Email showcasing the green Login button.</em>
+          </div>
+        </div>
+
+       
+
+        <h2 style="color: #347e57; font-size: 1.2rem; margin-top: 40px; margin-bottom: 15px;">How E-Transfers Connect to the Profile</h2>
+        <p>Many of our donors prefer to give using Interac E-Transfers sent directly from their personal online banking portals. Because these payments bypass the MAC online checkout entirely, it is crucial for administrators to understand how the system backend processes these funds to help donors avoid missing out on their annual tax receipts.</p>
+        
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>The Matching Algorithm:</strong> When an E-Transfer arrives in the MAC bank account, the system scans the email address the donor used to send the money from their bank.</li>
+            <li style="margin-bottom: 10px;"><strong>Automatic Linking:</strong> If the donor's banking email is an exact character match to the email address registered on their MAC profile, the system successfully verifies the user and automatically adds the E-Transfer amount to their main giving history.</li>
+            <li style="margin-bottom: 10px;"><strong>Unlinked Funds:</strong> If a donor uses a different email address for their online banking (e.g., using a work email for banking but a personal email for MAC), the system cannot verify ownership. The donation will be processed and recorded separately in the backend, meaning it will not appear on the user's profile and will be excluded from their main tax receipt.</li>
+            <li style="margin-bottom: 10px;"><strong>How to Fix Unlinked E-Transfers:</strong> If a donor reports a missing E-Transfer, direct them to log into the portal and navigate to the <strong>Donation Details</strong> section. By clicking on <strong>Linked e-Transfer Emails</strong> and selecting the <strong>Link e-Transfer to My Account</strong> button, they can input their specific banking email address. The system will then instantly retroactively link all past and future E-Transfers from that specific email to their main profile.</li>
+        </ul>
+
+        <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="linkEtransfer.png" alt="Registration Tab Configuration" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 3: Linking E-Transfers to the Donor Profile.</em>
+          </div>
+        </div>
+
+        <h2 style="color: #347e57; font-size: 1.2rem; margin-top: 40px; margin-bottom: 15px;">Beyond Donations: School & Program Registrations</h2>
+        <p>The MAC Portal is a comprehensive tool. For many of our active community members, this single profile acts as the central administrative hub for their entire family's educational and program needs, preventing the creation of scattered, duplicate records across different MAC centers.</p>
+        
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Adding Family Members:</strong> Parents can use the site to add dependents to their profile, keeping their entire family's demographic and medical information organized under one primary account holder.</li>
+            <li style="margin-bottom: 10px;"><strong>Registering for Programs:</strong> Parents can easily browse and register their children for MAC programs, weekend classes, summer camps, or full-time academic schools directly through the portal's interface.</li>
+            <li style="margin-bottom: 10px;"><strong>Tracking Admissions & Documents:</strong> Through the portal, parents can proactively monitor their child's current application status. The portal highlights if any requested enrollment documents (such as birth certificates or report cards) need to be uploaded to complete the admission process.</li>
+            <li style="margin-bottom: 10px;"><strong>Managing Tuition & Fees:</strong> The portal seamlessly handles all related billing. Parents can view detailed invoices for their child's tuition or program fees, check outstanding balances, review historical payments, and submit new payments securely online using the exact same login credentials they use for donations.</li>
+        </ul>
+
+       
+
+        <h2 style="color: #347e57; font-size: 1.2rem; margin-top: 40px; margin-bottom: 15px;">Navigating the Donor Profile (Troubleshooting & Support)</h2>
+        <p>When you are assisting a user over the phone or via email, having a firm grasp of the portal's layout allows you to guide them swiftly to a resolution. The profile is logically organized into four main operational areas, accessible via the left-hand sidebar:</p>
+        
+       
+
+        <h3 style="color: #347e57; font-size: 1.1rem; margin-top: 35px; margin-bottom: 15px;">1. Donation Details</h3>
+        <p style="margin-bottom: 15px;">This section is solely dedicated to the user's charitable giving history and associated documentation.</p>
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Donations & Transactions:</strong> Direct users here to see a comprehensive, sortable ledger of their past contributions. They can filter by date ranges, download individual transaction records for their files, or verify the status of specific one-time payments.</li>
+            <li style="margin-bottom: 10px;"><strong>Reporting a Missing Donation:</strong> If a user insists a payment was made but cannot locate it in their ledger, direct them to click the <strong>Report Missing Donation</strong> button on this screen. This opens a modal form that sends a direct ticket to the finance team for investigation. The user must fill out mandatory fields (Program, Donation Date, Donation Amount, and the specific Payment Method). They are highly encouraged to upload an image of their receipt or bank statement to expedite the verification process before clicking <strong>Submit Report</strong>.</li>
+        </ul>
+        
+
+           <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="MissingDonations.png" alt="Registration Tab Configuration" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 4: Missing Donation Form.</em>
+          </div>
+        </div>
+
+
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Pledges:</strong> Guide users here to view the status of active and past monthly commitments. They can track which specific MAC program they are supporting, the pledged amount, and view a progress bar of their installments.</li>
+            <li style="margin-bottom: 10px;"><strong>e-Transfers:</strong> A read-only ledger where users can verify that E-Transfers they have sent via their bank have been successfully captured and processed by the MAC system.</li>
+            <li style="margin-bottom: 10px;"><strong>Tax Receipts & Help Requests:</strong> Guide users to this tab to utilize the dropdown menu, select a specific tax year, and instantly download their official PDF tax document (automatically generated every February). If they spot an error on their receipt, they can click the <strong>I need help</strong> button. This opens a <strong>Tax Receipt Help Request</strong> form, creating a high-priority ticket for the administration. The user selects an Issue Type, writes a detailed description, and attaches supporting files before clicking <strong>Submit Request</strong>.</li>
+        </ul>
+
+           <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="HelpReq.png" alt="Registration Tab Configuration" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 5: Tax Receipt Tab and Help Request Form.</em>
+          </div>
+        </div>
+
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Linked e-Transfer Emails:</strong> The configuration page where users can manage and group multiple email aliases to ensure all bank transfers sync to this single profile.</li>
+        </ul>
+
+        <h3 style="color: #347e57; font-size: 1.1rem; margin-top: 35px; margin-bottom: 15px;">2. Finances</h3>
+        <p style="margin-bottom: 15px;">This section encompasses broader financial commitments, automated payment settings, and program billing.</p>
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Subscriptions:</strong> Help users track ongoing, automated credit card payments established through the portal. They can review their billing frequency, the specific amount drafted, the start/end dates, and verify if the subscription is currently active, paused, or cancelled.</li>
+            <li style="margin-bottom: 10px;"><strong>Payment History:</strong> A generalized, all-encompassing ledger of successful financial transactions tied to the user's account, combining both donations and program fee payments.</li>
+            <li style="margin-bottom: 10px;"><strong>Direct Withdrawal:</strong> If a user wishes to bypass credit card processing fees by setting up electronic fund transfers (EFT) directly from their bank account, direct them here. They will be required to input their banking transit and institution numbers and securely upload an image of a void cheque for authorization.</li>
+            <li style="margin-bottom: 10px;"><strong>Invoices:</strong> Direct parents and donors here to view detailed line-item bills for school tuition, busing fees, or registered programs. They can check outstanding balances, view payment due dates, and settle accounts.</li>
+        </ul>
+
+        <h3 style="color: #347e57; font-size: 1.1rem; margin-top: 35px; margin-bottom: 15px;">3. Registration</h3>
+        <p style="margin-bottom: 15px;">This section is the hub for managing student enrollments and administrative communication regarding programs.</p>
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Application status:</strong> Parents can view the real-time processing phase of their child's application (e.g., Under Review, Waitlisted, Accepted) for MAC schools or limited-capacity programs.</li>
+            <li style="margin-bottom: 10px;"><strong>Requested Document:</strong> A secure upload portal where users can provide missing paperwork, required medical forms, or identification documents specifically requested by the center's admissions administration.</li>
+            <li style="margin-bottom: 10px;"><strong>Activity invites:</strong> Users can view, accept, or reject specific programmatic invitations extended to their registered students (e.g., an invitation to join an advanced study group or a specialized camp cohort).</li>
+        </ul>
+
+        <h3 style="color: #347e57; font-size: 1.1rem; margin-top: 35px; margin-bottom: 15px;">4. Account Settings</h3>
+        <p style="margin-bottom: 15px;">This section controls the user's core demographic data, family structure, and security credentials.</p>
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Edit Profile:</strong> Direct users here to update their contact information. <strong>Crucial Admin Note:</strong> Continuously remind users that in order for the system to generate a valid tax receipt that complies with government regulations, all mandatory profile fields (First Name, Last Name, Street Address, City, Province, and Postal Code) must be completed accurately. Incomplete profiles will result in failed tax receipt generation during the February batch run.</li>
+            <li style="margin-bottom: 10px;"><strong>Children:</strong> The configuration page where parents add new dependents to their family tree, which is a prerequisite for beginning any registration process.</li>
+            <li style="margin-bottom: 10px;"><strong>Change Password / Sign Out:</strong> Standard account security and session management tools.</li>
+        </ul>
+        
+
+         <div style="margin: 30px 0; border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; background: var(--gray-50);">
+          <img src="editProfile.png" alt="Edit Profile Screen" style="width: 100%; display: block;">
+          <div style="padding: 10px 15px; font-size: 13px; color: var(--gray-600); border-top: 1px solid var(--gray-200); background: white;">
+            <em>Figure 6: Edit Profile screen showing mandatory fields for tax receipts</em>
+          </div>
+        </div>
+
+
+        <h2 style="color: #347e57; font-size: 1.2rem; margin-top: 40px; margin-bottom: 15px;">Why Donor Profiles Matter for Administration</h2>
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Automated Tax Receipts:</strong> A completed profile securely houses the user's full, verified mailing address. The MAC backend system relies exclusively on this exact data set to automatically generate and distribute tax receipts every February, drastically reducing manual data entry and correction workloads for the administrative team.</li>
+            <li style="margin-bottom: 10px;"><strong>Consolidated Giving & Family History:</strong> The profile acts as a single source of truth. This prevents the creation of messy, duplicate accounts and provides center managers with a holistic, 360-degree view of a user's total interactions and engagement with MAC, spanning from charitable donations to daily school tuition.</li>
+            <li style="margin-bottom: 10px;"><strong>Streamlined Future Processing:</strong> Once a foundational profile is established, any future payments, program registrations, or donations the user initiates are instantly recognized by the system and automatically appended to the correct ledger.</li>
+            <li style="margin-bottom: 10px;"><strong>Important - Linking New Payment Methods:</strong> When providing support, always emphasize to users that if they choose to use a brand new credit card or an alternate payment method on the public Online Donation portal, they must proactively log in and connect that new payment method to their existing profile. Making this connection ensures the system recognizes the new transactional data and groups it with their established history. If they fail to link it, the system will assume they are a new user, splitting their history across fragmented accounts, which ultimately leads to missing tax receipts or unsynced invoices that administrators are forced to manually reconcile.</li>
+        </ul>
+
+      </div>
+    </main>
+  </div>
+  
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
+
+  // Search functionality
+  const searchInput = document.getElementById('search-input');
+  let currentMatch = 0;
+  let matches = [];
+
+  function clearHighlights() {
+    document.querySelectorAll('.search-highlight').forEach(el => {
+      const parent = el.parentNode;
+      while (el.firstChild) {
+        parent.insertBefore(el.firstChild, el);
+      }
+      parent.removeChild(el);
+    });
+  }
+
+  function searchContent(query) {
+    clearHighlights();
+    matches = [];
+    currentMatch = 0;
+
+    if (!query.trim()) return;
+
+    const mainContent = document.querySelector('main');
+    const walker = document.createTreeWalker(
+      mainContent,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    let node;
+    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+
+    while (node = walker.nextNode()) {
+      if (regex.test(node.textContent)) {
+        const span = document.createElement('span');
+        span.innerHTML = node.textContent.replace(regex, '<mark class="search-highlight" style="background-color: #fff3cd; padding: 2px 4px; border-radius: 2px;">$1</mark>');
+        node.parentNode.replaceChild(span, node);
+
+        const highlights = span.querySelectorAll('.search-highlight');
+        highlights.forEach(h => matches.push(h));
+      }
+    }
+
+    if (matches.length > 0) {
+      matches[0].style.backgroundColor = '#ffc107';
+      matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  searchInput.addEventListener('input', (e) => {
+    searchContent(e.target.value);
+  });
+
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      const query = e.target.value;
+      if (matches.length > 0) {
+        currentMatch = (currentMatch + 1) % matches.length;
+        matches[currentMatch].style.backgroundColor = '#ffc107';
+        matches.forEach((m, i) => {
+          if (i !== currentMatch) m.style.backgroundColor = '#fff3cd';
+        });
+        matches[currentMatch].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+</script>
+</body>
+</html>
