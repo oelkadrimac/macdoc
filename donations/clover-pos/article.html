@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../../styles.css">
-  <title>Tax Receipts</title>
+  <title>Clover POS</title>
 </head>
 <body>
 
@@ -47,64 +47,43 @@
         </a>
       </div>
 
-      <h1 class="detail-title">Tax Receipts</h1>
-      <p class="detail-subtitle">Generate and manage tax receipts for donors.</p>
+      <h1 class="detail-title">Clover POS</h1>
+      <p class="detail-subtitle">Point-of-sale system and physical form processing for in-person donations.</p>
 
       <div class="detail-meta-row" style="margin-bottom: 40px; padding: 20px 0; border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200);">
         <span><i class="fa-regular fa-user"></i> By MAC Administration</span>
         <span><i class="fa-regular fa-clock"></i> Last updated: <span id="last-updated"></span></span>
       </div>
 
-      <p style="margin-bottom: 25px;">Tax receipts are important records that donors receive for their financial contributions. Since people choose to donate through various methods, the process for issuing these receipts differs depending on the specific channel used.</p>
+      <div style="margin-bottom: 40px; line-height: 1.8; color: #333333;">
 
-      <h4 id="when-sent-out" style="margin-bottom: 15px; color: var(--green);">When Are Tax Receipts Sent Out?</h4>
-      <ul style="margin-bottom: 25px; line-height: 2;">
-        <li>Tax receipts are distributed annually every February, which aligns smoothly with the start of the annual tax filing season.</li>
-        <li>The distribution period typically runs from the first week of February all the way through the end of the month.</li>
-      </ul>
+        <p>Clover Point of Sale (POS) machines are utilized across various MAC centers to process in-person credit and debit card transactions. It is important to understand the specific manual workflows required to ensure donors who use Clover terminals receive their tax receipts.</p>
 
-     <h4 id="online-portal" style="margin-bottom: 15px; color: var(--green); scroll-margin-top: 80px;">1. The Online Donation Portal</h4>
-      <ul style="margin-bottom: 25px; line-height: 2;">
-        <li>When donors use our online donation portal to contribute with their credit cards, they receive their tax receipts automatically.</li>
-        <li>This seamless process occurs since the online checkout form collects all necessary details upfront, including the donor's full name, email address, and complete mailing address.</li>
-        <li>Due to this online checkout, the system triggers an email instructing donors to set up a donor profile so they can easily view their donation history and cancel any future subscriptions.</li>
-      </ul>
+        <div id="important-note" style="background: #FFF3E0; border: 1px solid #FFE0B2; border-left: 5px solid #ff9800; padding: 20px; border-radius: 8px; margin-top: 30px; margin-bottom: 30px;">
+          <h4 style="margin-top: 0; color: #e65100;"><i class="fa-solid fa-circle-info" style="margin-right: 8px;"></i>System Disconnection</h4>
+          <p style="margin: 0;"><strong>Clover machines are not connected to MACSIS.</strong> Unlike the newer Stripe S-700 machines, donations made through Clover terminals will not automatically appear in the system, nor will they automatically show up on a donor's online profile.</p>
+        </div>
 
-      <h4 id="etransfers" style="margin-bottom: 15px; color: var(--green); scroll-margin-top: 80px;">2. E-Transfers</h4>
-      <ul style="margin-bottom: 25px; line-height: 2;">
-        <li>Donors can also receive tax receipts for contributions made through e-transfers.</li>
-        <li>These contributions are linked to a donor profile that keeps track of the individual's giving history, contact information, and address details.</li>
-        <li><strong>Important:</strong> Donors will not receive a tax receipt from their e-transfers if they do not complete their donor profile.</li>
-        <li>When an e-transfer is sent, the system only receives the donor's name, email, donation amount, transaction ID, reference number, and campaign message. Because the complete mailing address is missing, the donor must finish setting up their profile to receive a tax receipt.</li>
-      </ul>
+        <h2 style="color: #347e57; font-size: 1.2rem; margin-top: 40px; margin-bottom: 15px;">Processing Donations for Tax Receipts</h2>
+        <p>Because Clover machines are completely anonymous and only generate paper receipts, center staff must manually collect donor details using an <strong>Information Form</strong>. (Note: Do not refer to this as a pledge form, as no future pledge is being made).</p>
 
-      <h4 id="card-machines" style="margin-bottom: 15px; color: var(--green); scroll-margin-top: 80px;">3. Card Machines (Clover and Stripe S-700 Terminals)</h4>
-      <ul style="margin-bottom: 15px; line-height: 2;">
-        <li>Donations made through physical point-of-sale card machines have two different tax receipt workflows depending on the device:</li>
-      </ul>
-      <ol style="margin-bottom: 25px; line-height: 2;">
-        <li><strong>Clover Machines:</strong> Clover machines are not connected to MACSIS. To get a receipt, the donor needs to fill out a physical information form with their first name, last name, and address. They must staple their printed payment to the form, which must be submitted to the accounting department so they can manually add it to the donor profile.</li>
-        <li><strong>Stripe S-700 Terminals:</strong> The S700 machines are connected to MACSIS and do not print paper. The terminal has a section that asks the donor to enter their email address, which then sends them a link to create a donor profile for their tax receipt.</li>
-      </ol>
+        <p>Follow these steps to ensure the donation is processed correctly by the accounting department:</p>
 
-      <h4 id="mac-kiosks" style="margin-bottom: 15px; color: var(--green); scroll-margin-top: 80px;">4. MAC Donation Kiosks</h4>
-      <ul style="margin-bottom: 25px; line-height: 2;">
-        <li>MAC donation kiosks are standalone touchscreens where a person selects a campaign and taps their card to donate.</li>
-        <li>If the donor types in their email address, the system sends them a message containing a link to set up a donor profile.</li>
-        <li>Setting up this profile requires the donor to provide their email, first name, last name, and complete home address.</li>
-        <li>Once that profile is finished, the payment card they used becomes permanently linked to their account.</li>
-        <li>If they use a different credit card at the kiosk in the future, they will have to add their email address again.</li>
-      </ul>
+        <ul style="padding-left: 20px; margin-bottom: 25px;">
+            <li style="margin-bottom: 10px;"><strong>Step 1 - Print Receipt:</strong> Process the payment on the Clover machine and print the physical paper receipt.</li>
+            <li style="margin-bottom: 10px;"><strong>Step 2 - Complete the Information Form:</strong> Ask the donor to completely fill out a physical Information Form. Ensure they provide their First Name, Last Name, Address, Phone Number, Email Address, and Company Name (if applicable).</li>
+            <li style="margin-bottom: 10px;"><strong>Step 3 - Attach the Documents:</strong> Staple the printed Clover receipt directly to the donor's completed Information Form.</li>
+            <li style="margin-bottom: 10px;"><strong>Step 4 - Submit to Accounting:</strong> Send the physical package to the accounting department. They will use this collected information to manually add the donation to the donor's profile, allowing a tax receipt to be issued.</li>
+        </ul>
 
-      <div id="important-note" style="background: #FFF3E0; border: 1px solid #FFE0B2; padding: 20px; border-radius: 8px; margin-top: 30px;">
-        <h4 style="margin-top: 0; color: var(--green);">Important Note Regarding Kiosk Receipts</h4>
-        <p style="margin-bottom: 15px;"><strong>We specifically need the donor's email address</strong> to handle kiosk contributions properly. Immediately after the payment finishes, the screen prompts the donor to type in their email address.</p>
-        <p style="margin-bottom: 15px;">Unfortunately, many donors skip this step and walk away. No email means no receipt.</p>
-        <p style="margin: 0;">Furthermore, even if an email is provided, the donor profile must be set up. No donor profile equals no receipt.</p>
       </div>
-
     </main>
   </div>
+
+  <footer class="site-footer">
+    <p>© 2026 Muslim Association of Canada.</p>
+  </footer>
+</div>
 
 <script>
   document.getElementById('last-updated').innerText = new Date(document.lastModified).toLocaleDateString();
